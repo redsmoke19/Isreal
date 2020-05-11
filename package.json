@@ -50,6 +50,9 @@
     "node": "8.15"
   },
   "dependencies": {
-    "del": "^4.1.1"
+    "del": "^4.1.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-pug": "^4.0.1",
+    "normalize.css": "^8.0.1"
   }
 }
