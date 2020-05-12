@@ -1,0 +1,73 @@
+.s-about {
+  background: url("../img/about_bg.png") center 150px no-repeat;
+  background-size: 1366px 604px;
+}
+
+.about {
+  padding-bottom: 200px;
+  &__title {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  &__description {
+    font-size: 17px;
+    line-height: 29px;
+    margin-bottom: 48px;
+    padding: 0 213px;
+    text-align: center;
+  }
+  &__video {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  &__button {
+    cursor: pointer;
+    &::before {
+      background-color: $white;
+      border-radius: 50%;
+      content: "";
+      height: 96px;
+      left: calc(50% - 48px);
+      position: absolute;
+      opacity: 0.32;
+      top: calc(50% - 48px);
+      width: 96px;
+    }
+    &::after {
+      background-color: $white;
+      border-radius: 50%;
+      content: "";
+      height: 64px;
+      left: calc(50% - 32px);
+      position: absolute;
+      top: calc(50% - 32px);
+      transition: all linear 0.15s;
+      width: 64px;
+    }
+    &:hover {
+      &::after {
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+      }
+      .about__icon {
+        fill: $hover-blue-color;
+      }
+    }
+    &:active {
+      &::after {
+        background-color: $active-color;
+      }
+      .about__icon {
+        fill: $blue-color;
+      }
+    }
+  }
+  &__icon {
+    fill: $blue-color;
+    position: absolute;
+    left: calc(50% - 4px);
+    top: calc(50% - 9.5px);
+    transition: all linear 0.15s;
+    z-index: 100;
+  }
+}
