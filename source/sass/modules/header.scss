@@ -1,0 +1,39 @@
+.header {
+    background: $background-color url(../img/hero_bg1x.png) center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url('../img/hero_bg2x.png');
+      }
+    &__nav {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 32px;
+    }
+    &__phone {
+        color: $base-text-color;
+        font-family: $medium-font;
+        line-height: 18px;
+        text-decoration: none;
+        @media screen and (max-width: $tablet-size) {
+            order: 2;
+        }
+    }
+    &__callback {
+        border-bottom: 1px dashed $base-text-color;
+        font-family: $medium-font;
+        line-height: 18px;
+        text-transform: uppercase;
+        @media screen and (max-width: $tablet-size) {
+            order: 2;
+        }
+    }
+}
+
+.rrr {
+    fill: url(#pattern);
+    font-size: 200px;
+    text-transform: uppercase;
+    font-family: $header-font;
+}

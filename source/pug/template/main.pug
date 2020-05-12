@@ -17,12 +17,10 @@ html(lang="ru-RU")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
     <![endif]-->
   body
-    //.wrapper
-        //include ../modules/header/header
+    include ../modules/header
     .content
       block content
-      //include ../modules/footer/footer
-    script(src="static/js/jquery-3.3.1.min.js")
-    script(src="static/js/libs.min.js")
-    script(src="static/js/main.js")
+    //- include ../modules/footer
+    //- script(src="static/js/libs.min.js")
+    script(src="js/script.js")
     block script

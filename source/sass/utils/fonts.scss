@@ -1,17 +1,49 @@
 //Временно
 
 @font-face {
-  font-family: 'Rubik';
-  src: url('../fonts/Rubik-Bold.woff') format('woff'),
-  url('../fonts/Rubik-Bold.woff2') format('woff2');
+  font-family: 'FiraSans';
+  src: url('../../fonts/FiraSans-Regular.woff2') format('woff2'),
+  url('../../fonts/FiraSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'OpenSans';
-  src: url('../fonts/OpenSans-Regular.woff') format('woff'),
-  url('../fonts/OpenSans-Regular.woff2') format('woff2');
+  font-family: 'FiraSansMedium';
+  src: url('../../fonts/FiraSans-Medium.woff2') format('woff2'),
+  url('../../fonts/FiraSans-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FiraSansBold';
+  src: url('../../fonts/FiraSans-Bold.woff2') format('woff2'),
+  url('../../fonts/FiraSans-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../fonts/Montserrat-Bold.woff2') format('woff2'),
+  url('../../fonts/Montserrat-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../fonts/Raleway-Black.woff2') format('woff2'),
+  url('../../fonts/Raleway-Black.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RalewayBold';
+  src: url('../../fonts/Raleway-ExtraBold.woff2') format('woff2'),
+  url('../../fonts/Raleway-ExtraBold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

@@ -8,6 +8,7 @@ html {
 }
 
 body {
+  background-color: $background-color;
   color: $base-text-color;
   font-family: $main-font;
   height: 100%;
@@ -83,14 +84,9 @@ section {
 
 .container {
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 110px;
   position: relative;
-  @media screen and (min-width: $tablet-size) {
-    padding: 0 24px;
-  }
-  @media screen and (min-width: $desktop-size) {
-    //width: 1150px;
-  }
+  // width: 1366px;
 }
 
 .visually-hidden:not(:focus):not(:active),
