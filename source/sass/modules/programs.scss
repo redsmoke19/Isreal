@@ -1,0 +1,91 @@
+.s-programs {
+    &::before {
+        background: url("../img/programs_bg.png") center no-repeat;
+        background-size: cover;
+        content: "";
+        height: 426px;
+        position: absolute;
+        right: 0;
+        top: -65px;
+        width: 680px;
+    }
+}
+
+.programs {
+    padding-left: 100px;
+    &__title {
+        margin-bottom: 83px;
+    }
+}
+
+.tabs {
+    display: flex;
+    &__list {
+        flex-shrink: 0;
+        margin-right: 94px;
+        width: 198px;
+    }
+    &__item {
+        cursor: pointer;
+        line-height: 18px;
+        padding: 25px 10px 25px 72px;
+        span {
+            transition: color linear 0.15s;
+        }
+        &:hover span {
+            color: #FFD701;
+        }
+        &--active {
+            background: linear-gradient(138.15deg, #FFC341 20.46%, #FFD701 65.31%);
+            color: $white;
+            cursor: pointer;
+            font-family: $medium-font;
+            font-size: 16px;
+            line-height: 19px;
+            position: relative;
+            &::after {
+                content: "";
+                border-style: solid;
+                border-width: 34.5px 0 34.5px 37px;
+                border-color: transparent transparent transparent #FFD701;
+                position: absolute;
+                right: -37px;
+                top: 0;
+                z-index: -1;
+            }
+            &::before {
+                content: "";
+                height: 100%;
+                width: 37px;
+                position: absolute;
+                top: 0;
+                right: -37px;
+            }
+            &:hover span {
+                color: $white;
+            }
+        }
+        
+    }
+    &__inset {
+        display: none;
+        padding-right: 190px;
+        padding-top: 16px;
+        &--active {
+            display: block;
+        }
+    }
+    &__title {
+        color: $blue-color;
+        font-family: $title-font;
+        font-size: 28px;
+        line-height: 34px;
+        margin-bottom: 24px;
+    }
+    &__description {
+        line-height: 26px;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}

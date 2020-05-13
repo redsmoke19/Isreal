@@ -1,15 +1,45 @@
 'use strict';
-var pageHeader = document.querySelector('.page-header');
-var headerToggle = document.querySelector('.page-header__toggle');
+// var pageHeader = document.querySelector('.page-header');
+// var headerToggle = document.querySelector('.page-header__toggle');
 
-pageHeader.classList.remove('page-header--nojs');
+// pageHeader.classList.remove('page-header--nojs');
 
-headerToggle.addEventListener('click', function () {
-  if (pageHeader.classList.contains('page-header--closed')) {
-    pageHeader.classList.remove('page-header--closed');
-    pageHeader.classList.add('page-header--opened');
-  } else {
-    pageHeader.classList.add('page-header--closed');
-    pageHeader.classList.remove('page-header--opened');
+// headerToggle.addEventListener('click', function () {
+//   if (pageHeader.classList.contains('page-header--closed')) {
+//     pageHeader.classList.remove('page-header--closed');
+//     pageHeader.classList.add('page-header--opened');
+//   } else {
+//     pageHeader.classList.add('page-header--closed');
+//     pageHeader.classList.remove('page-header--opened');
+//   }
+// });
+(function () {
+  
+  function switchTabs() {
+    let tabsItems = document.querySelectorAll('.tabs__item');
+    let tabsContents = document.querySelectorAll('.tabs__inset');
+    let tabName;
+
+    tabsItems.forEach((item) => {
+      item.addEventListener('click', selectedTabsItem);
+    });
+
+    function selectedTabsItem() {
+      tabsItems.forEach((item) => {
+        item.classList.remove('tabs__item--active');
+      });
+      this.classList.add('tabs__item--active');
+      tabName = this.getAttribute('data-tab-name');
+      selectedTabContent(tabName);
+    }
+
+    function selectedTabContent(tab) {
+      tabsContents.forEach((item) =>{
+        item.classList.contains(tab) ? item.classList.add('tabs__inset--active') : item.classList.remove('tabs__inset--active') 
+      })
+    }
   }
-});
+
+  switchTabs();
+
+})();
