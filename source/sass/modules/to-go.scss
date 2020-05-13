@@ -1,0 +1,60 @@
+.s-to-go {
+  &::before {
+    background: url("../img/to-go_bg.png") center no-repeat;
+    background-size: cover;
+    content: "";
+    height: 594px;
+    position: absolute;
+    right: 0;
+    top: -213px;
+    width: 818px;
+  }
+  &::after {
+    background: url("../img/to-go_backpack.png") center no-repeat;
+    background-size: contain;
+    content: "";
+    height: 226px;
+    position: absolute;
+    left: -37px;
+    top: -40px;
+    width: 167px;
+  }
+}
+
+.to-go {
+  margin-bottom: 322px;
+  padding-left: 100px;
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__text {
+    font-size: 17px;
+    line-height: 29px;
+    max-width: 400px;
+    margin-bottom: 64px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: row;
+  }
+  &__phone {
+    border: 2px solid $border-color;
+    border-radius: 80px;
+    color: $base-text-color;
+    font-family: $medium-font;
+    font-size: 17px;
+    line-height: 20px;
+    padding: 20px 250px 20px 40px;
+    text-transform: uppercase;
+    width: 477px;
+    &::placeholder {
+      opacity: 0.5;
+    }
+    &:focus {
+      border-color: #ffc341;
+    }
+  }
+  &__submit {
+    margin-left: -229px;
+  }
+}
