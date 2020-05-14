@@ -31,6 +31,9 @@
     line-height: 18px;
     padding: 25px 10px 25px 72px;
     position: relative;
+    span {
+      opacity: 0.87;
+    }
     &:hover span {
       color: #ffd701;
     }
@@ -142,6 +145,7 @@
     display: none;
     padding-right: 190px;
     padding-top: 16px;
+    opacity: 0.87;
     &--active {
       display: block;
     }

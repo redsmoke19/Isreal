@@ -17,6 +17,7 @@ var include = require('posthtml-include');
 var del = require('del');
 var pug = require('gulp-pug');
 var cached = require('gulp-cached');
+var concat = require('gulp-concat');
 
 gulp.task('css', function () {
   return gulp.src('source/sass/style.scss')
@@ -40,7 +41,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('pug', function () {
-  return gulp.src('./source/pug/*.pug')
+  return gulp.src('source/pug/*.pug')
       .pipe(plumber())
       .pipe(pug({
         pretty: true
@@ -50,8 +51,25 @@ gulp.task('pug', function () {
       .pipe(posthtml([
         include()
       ]))
-      .pipe(gulp.dest('build/'));
+      .pipe(gulp.dest('build'));
 });
+
+gulp.task('script', function () {
+  return gulp.src('source/js/*.js')
+      .pipe(gulp.dest('build/js'));
+});
+
+var vendorsScripts = [
+  'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js'
+];
+
+gulp.task('vendor', function (cb) {
+  return vendorsScripts.length
+    ? gulp.src(vendorsScripts)
+        .pipe(concat('libs.js'))
+        .pipe(gulp.dest('build/js/vendor'))
+    : cb();
+})
 
 gulp.task('server', function () {
   server.init({
@@ -65,6 +83,7 @@ gulp.task('server', function () {
   gulp.watch('source/sass/**/*.{scss,sass}', gulp.series('css'));
   gulp.watch('source/img/icon-*.svg', gulp.series('sprite', 'html', 'refresh'));
   gulp.watch('source/**/*.pug', gulp.series('pug', 'refresh'));
+  gulp.watch('source/js/**/*.js', gulp.series('script', 'refresh'));
   // gulp.watch('source/*.html', gulp.series('html', 'refresh'));
 });
 
@@ -103,7 +122,7 @@ gulp.task('copy', function () {
     'source/fonts/**/*.{woff,woff2}',
     'source/img/content/**',
     'source/img/*.{png, jpg}',
-    'source/js/**',
+    'source/js/vendor/jquery-3.3.1.min.js',
     'source//*.ico'
   ], {
     base: 'source'
@@ -115,5 +134,5 @@ gulp.task('clean', function () {
   return del('build');
 });
 
-gulp.task('build', gulp.series('clean', 'webp', 'css', 'sprite', 'pug', 'copy'));
+gulp.task('build', gulp.series('clean', 'webp', 'css', 'sprite', 'pug', 'script', 'vendor', 'copy'));
 gulp.task('start', gulp.series('build', 'server'));

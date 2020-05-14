@@ -39,7 +39,32 @@
       })
     }
   }
-
   switchTabs();
+
+  function getPhoneMask() {
+    $('.to-go__phone').focus(function(e){
+      var $self = $(this);
+      if ($self.val() === '') {
+        $self.val('+7 ');
+      }
+      $self.data('placeholder-tmp', $self.attr('placeholder'));
+      $self.attr('placeholder', '');      
+    });
+    
+    $('.to-go__phone').blur(function(e){
+      var $self = $(this);
+      if ( $self.val() === '+7' || $self.val() === '+7 ') {
+        $self.val('');
+      }
+      $self.attr('placeholder', $self.data('placeholder-tmp'));
+    });
+  
+    $('.to-go__phone').mask('+7 (000) 000 00 00');
+
+    $('.to-go__submit').click(function(evt) {
+      evt.preventDefault();
+    });
+  }
+  getPhoneMask();    
 
 })();

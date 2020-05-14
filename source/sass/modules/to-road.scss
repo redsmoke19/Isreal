@@ -1,0 +1,76 @@
+.s-to-road {
+    &__image {
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+}
+
+.to-road {
+    padding-left: 590px;
+    padding-right: 20px;
+    &__title {
+        margin-bottom: 24px;
+    }
+    &__description {
+        line-height: 26px;
+        margin-bottom: 32px;
+        opacity: 0.87;
+    }
+    &__promo {
+        font-family: $medium-font;
+        font-size: 17px;
+        line-height: 29px;
+        margin-bottom: 24px;
+    }
+    &__list {
+        margin-bottom: 48px;
+        position: relative;
+    }
+    &__item {
+        align-items: baseline;
+        display: flex;
+        position: relative;
+        &:not(:last-child) {
+            padding-bottom: 50px;
+        }
+    }
+    &__number {
+        color: $yellow-color;
+        font-family: $bold-font;
+        margin-right: 37px;
+        position: relative;
+        z-index: 1;
+         &::before {
+            content: "";
+            background-color: $white;
+            border-radius: 50%;
+            box-shadow: 0 3px 12px rgba(0,0,0,.1);
+            height: 36px;
+            position: absolute;
+            left: -14px;
+            top: -18px;
+            transform: translateY(9px);
+            width: 36px;
+            z-index: -1;
+        }
+    }
+    &__line {
+        position: absolute;
+        width: 100%;
+        border-left: 1px dashed $base-text-color;
+        height: 100%;
+        left: 4px;
+        opacity: 0.2;
+    }
+    &__text {
+        line-height: 21px;
+        opacity: 0.87;
+    }
+    &__note {
+        border-left: 4px solid $yellow-color;
+        line-height: 21px;
+        padding-left: 14px;
+        opacity: 0.5;
+    }
+}
