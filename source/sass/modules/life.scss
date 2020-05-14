@@ -1,0 +1,60 @@
+.s-life {
+  margin-bottom: 280px;
+}
+
+.life {
+  &__title {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  &__description {
+    text-align: center;
+    line-height: 29px;
+    margin: 0 auto 46px auto;
+    opacity: 0.87;
+    width: 635px;
+  }
+  &__images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  &__col-1 {
+    flex-shrink: 0;
+    margin-top: -66px;
+  }
+  &__col-2 {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+  &__row-1 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+  &__row-2 {
+    display: flex;
+    flex-direction: row;
+  }
+  &__image {
+    position: relative;
+    &:nth-of-type(odd) {
+      margin-right: 30px;
+    }
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+  &__note {
+    bottom: 32px;
+    color: $white;
+    font-family: $bold-font;
+    font-size: 21px;
+    line-height: 25px;
+    position: absolute;
+    left: 40px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+    width: 90%;
+  }
+}
