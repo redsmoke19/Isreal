@@ -1,5 +1,24 @@
 .s-life {
-  margin-bottom: 280px;
+  margin-bottom: 160px;
+  &::after {
+    background: url("../img/watch_bg.png") center no-repeat;
+    bottom: 82px;
+    content: "";
+    height: 148px;
+    position: absolute;
+    right: 0;
+    width: 90px;
+  }
+  &::before {
+    background: url("../img/life_bg.png") center no-repeat;
+    background-size: 100% 100%;
+    content: "";
+    height: 950px;
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 100%;
+  }
 }
 
 .life {
@@ -15,18 +34,24 @@
     width: 635px;
   }
   &__images {
+    align-items: flex-end;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+  }
+  &__photo {
+    width: 100%;
+    height: auto;
   }
   &__col-1 {
     flex-shrink: 0;
     margin-top: -66px;
+    flex-basis: 42%;
   }
   &__col-2 {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
+    flex-basis: 58%;
   }
   &__row-1 {
     display: flex;
@@ -44,6 +69,12 @@
     }
     &:first-child {
       margin-right: 15px;
+    }
+    &--big {
+      flex-grow: 2;
+    }
+    &--small {
+      flex-grow: 1;
     }
   }
   &__note {

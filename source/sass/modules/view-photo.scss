@@ -1,0 +1,39 @@
+.s-view-photo {
+  margin-bottom: 136px;
+  &__image {
+    height: auto;
+    //position: absolute;
+    width: 100%;
+  }
+}
+
+.view-photo {
+  padding-left: 60.6%;
+  padding-top: 10.6%;
+  position: absolute;
+  top: 0;
+  width: 96%;
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__description {
+    color: $white;
+    font-size: 17px;
+    line-height: 29px;
+    margin-bottom: 48px;
+    opacity: 0.87;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  }
+  &__button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    padding: 0;
+    width: 57.4%;
+  }
+  &__icon {
+    fill: $white;
+    margin-right: 8px;
+  }
+}

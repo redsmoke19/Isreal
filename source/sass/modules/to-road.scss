@@ -6,7 +6,7 @@
   }
   &::before {
     background: url("../img/watercolor_bg.png") center no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     content: "";
     height: 1208px;
     position: absolute;
@@ -16,14 +16,13 @@
     width: 100%;
   }
   &::after {
-    background: url("../img/stamp.png") center no-repeat;
-    //background-size: cover;
+    background: url("../img/stamp2.png") center no-repeat;
     content: "";
     height: 254px;
     position: absolute;
-    right: -120px;
+    right: 0;
     top: 180px;
-    width: 337px;
+    width: 210px;
   }
 }
 

@@ -39,21 +39,8 @@
     flex-direction: row;
   }
   &__phone {
-    border: 2px solid $border-color;
-    border-radius: 80px;
-    color: $base-text-color;
-    font-family: $medium-font;
-    font-size: 17px;
-    line-height: 20px;
     padding: 20px 250px 20px 40px;
-    text-transform: uppercase;
     width: 477px;
-    &::placeholder {
-      opacity: 0.5;
-    }
-    &:focus {
-      border-color: #ffc341;
-    }
   }
   &__submit {
     margin-left: -229px;

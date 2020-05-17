@@ -1,0 +1,85 @@
+.s-details {
+  .container {
+    padding-right: 0;
+  }
+}
+
+.details {
+  &__top {
+    display: flex;
+    margin-bottom: 64px;
+  }
+  &__title {
+    margin-bottom: 48px;
+  }
+  &__your-city {
+    color: rgba($base-text-color, 0.74);
+    line-height: 22px;
+    display: flex;
+    margin-bottom: 39px;
+    &--name {
+      border-bottom: 1px dashed $blue-color;
+      cursor: pointer;
+      font-family: $medium-font;
+      margin-left: 16px;
+      text-transform: uppercase;
+      transition: opacity linear 0.15s;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  &__description {
+    font-size: 17px;
+    line-height: 29px;
+    padding-right: 75px;
+    opacity: 0.87;
+  }
+  &__map {
+    flex-shrink: 0;
+  }
+  &__bottom {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 72px;
+    padding-right: 110px;
+  }
+  &__information {
+    display: flex;
+    flex-basis: 29%;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-right: 14px;
+  }
+  &__text {
+    font-family: $medium-font;
+    font-size: 17px;
+    line-height: 25px;
+    margin-bottom: 12px;
+    opacity: 0.87;
+  }
+  &__note {
+    font-size: 13px;
+    line-height: 19px;
+    opacity: 0.5;
+  }
+  &__form {
+    align-items: center;
+    display: flex;
+    flex-basis: 100%;
+    //justify-content: space-between;
+    justify-content: flex-end;
+  }
+  &__input {
+    //width: 31.6%;
+    margin-right: 24px;
+    padding: 20px 40px;
+    width: 250px;
+  }
+  &__button {
+    //width: 27.4%;
+    width: 216px;
+  }
+
+}

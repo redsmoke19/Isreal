@@ -23,7 +23,83 @@
       background: linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%);
     }
     &:active {
-      background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(143.55deg, #FFC341 -50.3%, #FFD701 63.1%);
+      background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%);
+    }
+  }
+  &__input {
+    border: 2px solid $border-color;
+    border-radius: 80px;
+    color: $base-text-color;
+    font-family: $medium-font;
+    font-size: 17px;
+    line-height: 20px;
+    text-transform: uppercase;
+    &::placeholder {
+      opacity: 0.5;
+    }
+    &:focus {
+      border-color: #ffc341;
+    }
+  }
+}
+
+.social {
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  &__link {
+    cursor: pointer;
+    &:hover {
+      svg {
+        opacity: 0.6;
+      }
+    }
+  }
+  &__icon {
+    fill: black;
+    opacity: 0.2;
+    transition: opacity linear 0.15s;
+  }
+}
+
+.card {
+  display: flex;
+  margin-bottom: 32px;
+  padding-right: 75px;
+  &__picture {
+    margin-right: 20px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+  &__curator {
+    display: flex;
+    line-height: 22px;
+    margin-bottom: 12px;
+    &--title {
+      color: $blue-color;
+      margin-right: 8px;
+    }
+    &--name {
+      opacity: 0.74;
+    }
+  }
+  &__address {
+    font-size: 13px;
+    line-height: 19px;
+    margin-bottom: 10px;
+    opacity: 0.74;
+  }
+  &__social {
+    display: flex;
+    margin-top: auto;
+  }
+  &__link {
+    &:not(:last-child) {
+      margin-right: 12px;
     }
   }
 }

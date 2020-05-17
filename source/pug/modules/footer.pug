@@ -1,0 +1,20 @@
+footer.footer
+  .container
+    .footer__inner
+      picture
+        source(type="image/webp" srcset="img/content/footer-logo_x1.webp, img/content/footer-logo_x2.webp 2x")
+        img.header__logo(src="img/content/footer-logo_x1.png" srcset="img/content/footer-logo_x2.png 2x" alt="Логотип фирмы Маса" width="85" height="27")
+      p.footer__copyright Copyright someDesignCompany ©2019
+      ul.footer__social.social
+        li.social__item
+          a.social__link
+            span.visually-hidden Ссылка на facebook
+            +icon('icon-facebook', 'social__icon', '10', '20')
+        li.social__item
+          a.social__link
+            span.visually-hidden Ссылка на twitter
+            +icon('icon-twitter', 'social__icon social__icon--twitter', '22', '18')
+        li.social__item
+          a.social__link
+            span.visually-hidden Ссылка на instagram
+            +icon('icon-insta', 'social__icon social__icon--insta', '24', '24')

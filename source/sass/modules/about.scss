@@ -1,6 +1,16 @@
 .s-about {
-  background: url("../img/about_bg.png") center 150px no-repeat;
-  background-size: 1366px 604px;
+  //background: url("../img/about_bg.png") center 150px no-repeat;
+  //background-size: 1366px 604px;
+  &::before {
+    background: url("../img/about_bg.png") center no-repeat;
+    background-size: 100% 100%;
+    content: "";
+    height: 604px;
+    position: absolute;
+    left: 0;
+    top: 160px;
+    width: 100%;
+  }
 }
 
 .about {
@@ -17,9 +27,12 @@
     text-align: center;
   }
   &__video {
-    display: flex;
-    justify-content: center;
+    padding: 0 140px;
     position: relative;
+  }
+  &__image {
+    width: 100%;
+    height: auto;
   }
   &__button {
     cursor: pointer;
