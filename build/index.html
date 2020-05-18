@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
   </head>
   <body>
+    <div class="overlay"></div>
     <header class="header">
       <div class="container">
         <div class="header__nav"><a class="header__phone" href="tel:+792726216581">+ (972) 2 – 621 – 6581</a>
@@ -18,10 +19,6 @@
           </picture><a class="header__callback">заказать звонок</a>
         </div>
         <div class="header__hero hero">
-          <!--svg(width="100%" height="300")-->
-          <!--    pattern(id="pattern" patternUnits="userSpaceOnUse" width="1200" height="300" viewbox="75 90 1200 300")-->
-          <!--        image(xlink:href="/img/hero_overlay.png" width="1057" height="726")-->
-          <!--    text.rrr(x="0" y="300") Израиль-->
           <p class="hero__text">Учёба, путешествие и карьера для еврейской молодёжи</p>
           <div class="hero__mouse-scroll">
             <svg class="svg-sprite-icon icon-icon-circle_big hero__icon hero__icon--big-circle" width="76" height="76">
@@ -37,12 +34,12 @@
         </div>
       </div>
     </header>
-    <div class="content">
+    <main class="content">
       <section class="s-about">
         <div class="container">
           <div class="about">
             <h2 class="about__title section__title">О программе</h2>
-            <p class="about__description">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
+            <p class="about__description">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле.В течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
             <div class="about__video">
               <picture>
                 <source type="image/webp" srcset="img/content/about1x.webp, img/content/about2x.webp 2x"><img class="about__image" src="img/content/about1x.png" srcset="img/content/about2x.png 2x" alt="Превью видео" width="870" height="460">
@@ -62,11 +59,11 @@
             <h2 class="programs__title section__title">Програмы</h2>
             <div class="pragrams__tabs tabs">
               <ul class="tabs__list">
-                <li class="tabs__item tabs__item--active" data-tab-name="tabs__general"><span>Общие</span></li>
-                <li class="tabs__item" data-tab-name="tabs__academic"><span>Академические</span></li>
-                <li class="tabs__item" data-tab-name="tabs__internship"><span>Стажировка</span></li>
-                <li class="tabs__item" data-tab-name="tabs__volunteering"><span>Волонтёрство</span></li>
-                <li class="tabs__item" data-tab-name="tabs__religion"><span>Религиозные</span></li>
+                <li class="tabs__item tabs__item--active" data-tab-name="tabs__general">Общие</li>
+                <li class="tabs__item" data-tab-name="tabs__academic">Академические</li>
+                <li class="tabs__item" data-tab-name="tabs__internship">Стажировка</li>
+                <li class="tabs__item" data-tab-name="tabs__volunteering">Волонтёрство</li>
+                <li class="tabs__item" data-tab-name="tabs__religion">Религиозные</li>
               </ul>
               <div class="tabs__content">
                 <div class="tabs__inset tabs__general tabs__inset--active">
@@ -77,7 +74,7 @@
                 <div class="tabs__inset tabs__academic">
                   <h3 class="tabs__title">Академические</h3>
                   <p class="tabs__description">is ullam earum ratione! Veritatis ad repellendus a soluta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus reprehenderit dolore, totam repudiandae placeat ratione tempora corrupti, laboriosam nemo natus provident hic ex officiis alias eveniet cumque magni dignissimos! Aperiam. </p>
-                  <p class="tabs__description">Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.</p>
+                  <p class="tabs__description">Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.</p>
                 </div>
                 <div class="tabs__inset tabs__internship">
                   <h3 class="tabs__title">Стажировка</h3>
@@ -105,7 +102,9 @@
             <h2 class="to-go__title section__title">Хочу поехать</h2>
             <p class="to-go__text">Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
             <form class="to-go__form">
-              <input class="to-go__phone section__input" type="tel" placeholder="Телефон">
+              <label>
+                <input class="to-go__phone section__input js-phone__input" aria-label="Введите свой номер телефона" type="tel" placeholder="Телефон">
+              </label>
               <button class="to-go__submit section__button" type="submit">Перезвоните мне</button>
             </form>
           </div>
@@ -119,7 +118,7 @@
           <div class="to-road">
             <h2 class="to-road__title section__title">Как поехать</h2>
             <p class="to-road__description">Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p>
-            <p class="to-road__promo">Чтобы иметь возможность получить грант на обучение  от 4200 до 8400$, вы должны:</p>
+            <p class="to-road__promo">Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:</p>
             <ul class="to-road__list">
               <li class="to-road__item"><span class="to-road__number">1</span><span class="to-road__text">Быть в возрасте от 16 до 30 лет</span>
                 <div class="to-road__line"></div>
@@ -127,7 +126,7 @@
               <li class="to-road__item"><span class="to-road__number">2</span><span class="to-road__text">Иметь оконченное среднее образование</span>
                 <div class="to-road__line"></div>
               </li>
-              <li class="to-road__item"><span class="to-road__number">3</span><span class="to-road__text">Иметь документально подтверждённые еврейские корни и пройти консульскую проверку</span>
+              <li class="to-road__item"><span class="to-road__number">3</span><span class="to-road__text">Иметь документально подтверждённые еврейские корни и пройти консульскую проверку</span>
                 <div class="to-road__line"></div>
               </li>
               <li class="to-road__item"><span class="to-road__number">4</span><span class="to-road__text">За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</span></li>
@@ -140,13 +139,13 @@
         <div class="container">
           <div class="life">
             <h2 class="section__title life__title">Жизнь в Израиле</h2>
-            <p class="life__description">Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и познакомиться с богатой культурно-исторической жизнью Израиля и его жителей.</p>
+            <p class="life__description">Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и познакомиться с богатой культурно-исторической жизнью Израиля и его жителей.</p>
             <div class="life__images">
               <div class="life__col-1">
                 <div class="life__image">
                   <picture>
                     <source type="image/webp" srcset="img/content/life-1x1.webp, img/content/life-1x2.webp 2x"><img class="life__photo" src="img/content/life-1x1.png" srcset="img/content/life-1x2.png 2x" alt="Фото храма в Израиле" width="482" height="732">
-                  </picture><span class="life__note">Экскурсии по Израилю <br>и знакомство с его историей</span>
+                  </picture><span class="life__note">Экскурсии по Израилю<br>и знакомство с его историей</span>
                 </div>
               </div>
               <div class="life__col-2">
@@ -171,7 +170,7 @@
                   <div class="life__image life__image--small">
                     <picture>
                       <source type="image/webp" srcset="img/content/life-5x1.webp, img/content/life-5x2.webp 2x"><img class="life__photo" src="img/content/life-5x1.png" srcset="img/content/life-5x2.png 2x" alt="Фото храма в Израиле" width="214" height="318">
-                    </picture><span class="life__note">Развитие<br> лидерства</span>
+                    </picture><span class="life__note">Развитие<br>лидерства</span>
                   </div>
                 </div>
               </div>
@@ -185,7 +184,7 @@
         </picture>
         <div class="view-photo">
           <h2 class="section__title view-photo__title">#masaizrael</h2>
-          <p class="view-photo__description">Познакомьтесь с программой от первого лица! Многие участники ведут блоги и фотодневники о жизни, учёбе и путешествиях в Израиле.</p><a class="section__button view-photo__button">
+          <p class="view-photo__description">Познакомьтесь с программой от первого лица! Многие участники ведут блоги и фотодневники о жизни, учёбе и путешествиях в Израиле.</p><a class="section__button view-photo__button">
             <svg class="svg-sprite-icon icon-icon-insta view-photo__icon" width="24" height="24">
               <use xlink:href="img/sprite_auto.svg#icon-insta"></use>
             </svg><span>Смотреть фото</span></a>
@@ -200,7 +199,7 @@
                 <li class="question__item">
                   <div class="question__title"><span class="question__number">1</span>
                     <p class="question__text">Кто организатор? Какие сроки у программы?</p>
-                    <svg class="svg-sprite-icon icon-icon-arrow question__icon" width="15" height="8">
+                    <svg class="svg-sprite-icon icon-icon-arrow question__icon" width="17" height="11">
                       <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
                     </svg>
                   </div>
@@ -209,7 +208,7 @@
                 <li class="question__item">
                   <div class="question__title"><span class="question__number">2</span>
                     <p class="question__text">Что такое грант на обучение?</p>
-                    <svg class="svg-sprite-icon icon-icon-arrow question__icon" width="15" height="8">
+                    <svg class="svg-sprite-icon icon-icon-arrow question__icon" width="17" height="11">
                       <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
                     </svg>
                   </div>
@@ -218,7 +217,7 @@
                 <li class="question__item">
                   <div class="question__title"><span class="question__number">3</span>
                     <p class="question__text">Как определяется стоимость программы?</p>
-                    <svg class="svg-sprite-icon icon-icon-arrow question__icon" width="15" height="8">
+                    <svg class="svg-sprite-icon icon-icon-arrow question__icon" width="17" height="11">
                       <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
                     </svg>
                   </div>
@@ -227,16 +226,16 @@
                 <li class="question__item">
                   <div class="question__title"><span class="question__number">4</span>
                     <p class="question__text">Что такое грант на обучение?</p>
-                    <svg class="svg-sprite-icon icon-icon-arrow question__icon" width="15" height="8">
+                    <svg class="svg-sprite-icon icon-icon-arrow question__icon" width="17" height="11">
                       <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
                     </svg>
                   </div>
-                  <p class="question__answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi cupiditate dolore eaque eum facilis hic laboriosam maiores, nesciunt obcaecati, omnis quam quibusdam rerum, totam voluptas voluptate. Optio, repellat.</p>
+                  <p class="question__answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi cupiditate dolore eaque eum facilis hic laboriosam maiores, nesciunt obcaecati, omnis quam quibusdam rerum, totam voluptas voluptate. Optio, repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi cupiditate dolore eaque eum facilis hic laboriosam maiores, nesciunt obcaecati, omnis quam quibusdam rerum, totam voluptas voluptate. Optio, repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem commodi cupiditate dolore eaque eum facilis hic laboriosam maiores, nesciunt obcaecati, omnis quam quibusdam rerum, totam voluptas voluptate. Optio, repellat.</p>
                 </li>
                 <li class="question__item">
                   <div class="question__title"><span class="question__number">5</span>
                     <p class="question__text">Признаётся ли учеба в рамках проекта для дальнейшего обучения?</p>
-                    <svg class="svg-sprite-icon icon-icon-arrow question__icon" width="15" height="8">
+                    <svg class="svg-sprite-icon icon-icon-arrow question__icon" width="17" height="11">
                       <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
                     </svg>
                   </div>
@@ -244,8 +243,8 @@
                 </li>
                 <li class="question__item">
                   <div class="question__title"><span class="question__number">6</span>
-                    <p class="question__text">Как выглдядит полный процесс регистрации на программу «Маса»?</p>
-                    <svg class="svg-sprite-icon icon-icon-arrow question__icon" width="15" height="8">
+                    <p class="question__text">Как выглдядит полный процесс регистрации на программу «Маса»?</p>
+                    <svg class="svg-sprite-icon icon-icon-arrow question__icon" width="17" height="11">
                       <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
                     </svg>
                   </div>
@@ -265,7 +264,20 @@
         <div class="container">
           <div class="feedback">
             <h2 class="section__title feedback__title">Отзывы</h2>
-            <div class="feedback__slider sliders">
+            <div class="slider__nav">
+              <div class="slider__page-count">3 / 6</div>
+              <button class="slider__button slider__button--left">
+                <svg class="svg-sprite-icon icon-icon-arrow slider__icon slider__icon--left" width="17" height="11">
+                  <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+                </svg>
+              </button>
+              <button class="slider__button slider__button--right">
+                <svg class="svg-sprite-icon icon-icon-arrow slider__icon slider__icon--right" width="17" height="11">
+                  <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="feedback__slider js-sliders">
               <div class="slider">
                 <div class="slider__picture">
                   <picture>
@@ -281,19 +293,38 @@
                     <p class="slider__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p><span class="slider__reed-more">Читать подробнее</span>
                   </div>
                   <div class="slider__footer">
-                    <div class="slider__nav">
-                      <div class="slider__page-count">3 / 6</div>
-                      <button class="slider__button slider__button--left">
-                        <svg class="svg-sprite-icon icon-icon-arrow slider__icon slider__icon--left" width="17" height="11">
-                          <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
-                        </svg>
-                      </button>
-                      <button class="slider__button slider__button--right">
-                        <svg class="svg-sprite-icon icon-icon-arrow slider__icon slider__icon--right" width="17" height="11">
-                          <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
-                        </svg>
-                      </button>
-                    </div>
+                    <ul class="slider__social social">
+                      <li class="social__item"><a class="social__link"><span class="visually-hidden">Ссылка на facebook</span>
+                          <svg class="svg-sprite-icon icon-icon-facebook social__icon social__icon--facebook" width="10" height="20">
+                            <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a class="social__link"><span class="visually-hidden">Ссылка на twitter</span>
+                          <svg class="svg-sprite-icon icon-icon-twitter social__icon social__icon--twitter" width="22" height="18">
+                            <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a class="social__link"><span class="visually-hidden">Ссылка на instagram</span>
+                          <svg class="svg-sprite-icon icon-icon-insta social__icon social__icon--insta" width="24" height="24">
+                            <use xlink:href="img/sprite_auto.svg#icon-insta"></use>
+                          </svg></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="slider">
+                <div class="slider__picture">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/feedback_img_x1.webp, img/content/feedback_img_x2.webp 2x"><img class="slider__photo" src="img/content/feedback_img_x1.png" srcset="img/content/feedback_img_x2.png 2x" alt="Фотография из блога участника программы" width="364" height="480">
+                  </picture>
+                </div>
+                <div class="slider__main"><span class="slider__name">Ольга Михайлова</span>
+                  <div class="slider__program"><span class="slider__program--title">Программа:</span>
+                    <p class="slider__program--name">Арт-Тель, февраль-сетнябрь 2017</p>
+                  </div>
+                  <div class="slider__review">
+                    <p class="slider__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
+                    <p class="slider__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p><span class="slider__reed-more">Читать подробнее</span>
+                  </div>
+                  <div class="slider__footer">
                     <ul class="slider__social social">
                       <li class="social__item"><a class="social__link"><span class="visually-hidden">Ссылка на facebook</span>
                           <svg class="svg-sprite-icon icon-icon-facebook social__icon social__icon--facebook" width="10" height="20">
@@ -347,7 +378,7 @@
                     </ul>
                   </div>
                 </div>
-                <p class="details__description">Куратор является опытным специалистом агентства Сохнут  и знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте подробнее о программах и выберите свою !</p>
+                <p class="details__description">Куратор является опытным специалистом агентства Сохнут и знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте подробнее о программах и выберите свою !</p>
               </div>
               <div class="details__map"><img class="questions__image" src="img/content/details_map.png" alt="Карта проезда" width="702" height="448"></div>
             </div>
@@ -356,15 +387,19 @@
                 <p class="details__text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p><span class="details__note">Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</span>
               </div>
               <form class="details__form">
-                <input class="details__input details__input--name section__input" type="text" placeholder="Имя" minlength="3" maxlength="20">
-                <input class="details__input details__input--phone section__input" type="tel" placeholder="Телефон">
+                <label>
+                  <input class="details__input details__input--name section__input" aria-label="Введите своё имя" type="text" placeholder="Имя" minlength="3" maxlength="20">
+                </label>
+                <label>
+                  <input class="details__input details__input--phone section__input js-phone__input" aria-label="Введите свой номер телефона" type="tel" placeholder="Телефон">
+                </label>
                 <button class="details__button section__button" type="submit">Позвоните мне</button>
               </form>
             </div>
           </div>
         </div>
       </section>
-    </div>
+    </main>
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
@@ -389,7 +424,25 @@
         </div>
       </div>
     </footer>
-    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <div class="modal">
+      <div class="modal-callback">
+        <h2>Заказать звонок</h2>
+        <p> Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
+        <form>
+          <label>
+            <input type="text" aria-label="Введите Ваше имя" minlength="3" max-length="20" placeholder="Имя">
+          </label>
+          <label>
+            <input class="js-phone__input" type="tel" aria-label="Введите Ваш номер телефона" placeholder="Телефон">
+          </label>
+          <button type="submit">Перезвоните мне</button>
+          <div class="modal-callback__footer">
+            <input type="checkbox" id="accept" name="accept" value="verification">
+            <label class="modal-callback__label" for="accept">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="js/vendor/libs.js"></script>
     <script src="js/script.js"></script>
   </body>

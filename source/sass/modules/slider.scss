@@ -1,6 +1,7 @@
 .slider {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   &__picture {
     flex-basis: 32.2%;
     flex-shrink: 0;
@@ -62,12 +63,16 @@
   &__footer {
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-top: auto;
   }
   &__nav {
     align-items: center;
     display: flex;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 38%;
   }
   &__page-count {
     font-size: 17px;

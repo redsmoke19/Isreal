@@ -1,0 +1,12 @@
+.modal-callback
+    h2 Заказать звонок
+    p  Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!
+    form
+        label
+            input(type="text" aria-label="Введите Ваше имя" minlength="3" max-length="20" placeholder="Имя")
+        label
+            input.js-phone__input(type="tel" aria-label="Введите Ваш номер телефона" placeholder="Телефон")
+        button(type="submit") Перезвоните мне
+        .modal-callback__footer
+            input(type="checkbox" id="accept" name="accept" value="verification")
+            label.modal-callback__label(for="accept") Нажимая на кнопку, вы даёте согласие на обработку персональных данных

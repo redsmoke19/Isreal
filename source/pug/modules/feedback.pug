@@ -2,7 +2,13 @@ section.s-feedback
   .container
     .feedback
       h2.section__title.feedback__title Отзывы
-      .feedback__slider.sliders
+      .slider__nav
+                .slider__page-count 3 / 6
+                button.slider__button.slider__button--left
+                  +icon('icon-arrow', 'slider__icon slider__icon--left', '17', '11')
+                button.slider__button.slider__button--right
+                  +icon('icon-arrow', 'slider__icon slider__icon--right', '17', '11')
+      .feedback__slider.js-sliders
         .slider
           .slider__picture
             picture
@@ -18,12 +24,40 @@ section.s-feedback
               p.slider__text С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.
               span.slider__reed-more Читать подробнее
             .slider__footer
-              .slider__nav
-                .slider__page-count 3 / 6
-                button.slider__button.slider__button--left
-                  +icon('icon-arrow', 'slider__icon slider__icon--left', '17', '11')
-                button.slider__button.slider__button--right
-                  +icon('icon-arrow', 'slider__icon slider__icon--right', '17', '11')
+              ul.slider__social.social
+                li.social__item
+                  a.social__link
+                    span.visually-hidden Ссылка на facebook
+                    +icon('icon-facebook', 'social__icon social__icon--facebook', '10', '20')
+                li.social__item
+                  a.social__link
+                    span.visually-hidden Ссылка на twitter
+                    +icon('icon-twitter', 'social__icon social__icon--twitter', '22', '18')
+                li.social__item
+                  a.social__link
+                    span.visually-hidden Ссылка на instagram
+                    +icon('icon-insta', 'social__icon social__icon--insta', '24', '24')
+        .slider
+          .slider__picture
+            picture
+              source(type="image/webp" srcset="img/content/feedback_img_x1.webp, img/content/feedback_img_x2.webp 2x")
+              img.slider__photo(src="img/content/feedback_img_x1.png" srcset="img/content/feedback_img_x2.png 2x" alt="Фотография из блога участника программы" width="364" height="480")
+          .slider__main
+            span.slider__name Ольга Михайлова
+            .slider__program
+              span.slider__program--title Программа:
+              p.slider__program--name Арт-Тель, февраль-сетнябрь 2017
+            .slider__review
+              p.slider__text Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.
+              p.slider__text С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.
+              span.slider__reed-more Читать подробнее
+            .slider__footer
+              //- .slider__nav
+              //-   .slider__page-count 3 / 6
+              //-   button.slider__button.slider__button--left
+              //-     +icon('icon-arrow', 'slider__icon slider__icon--left', '17', '11')
+              //-   button.slider__button.slider__button--right
+              //-     +icon('icon-arrow', 'slider__icon slider__icon--right', '17', '11')
               ul.slider__social.social
                 li.social__item
                   a.social__link

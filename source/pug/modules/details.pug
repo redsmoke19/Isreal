@@ -30,7 +30,7 @@ section.s-details
                   a.social__link
                     span.visually-hidden Ссылка на Telegram
                     +icon('icon-telegram', 'social__icon', '22', '18')
-          p.details__description Куратор является опытным специалистом агентства Сохнут  и знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте подробнее о программах и выберите свою !
+          p.details__description Куратор является опытным специалистом агентства Сохнут и знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте подробнее о программах и выберите свою !
         .details__map
           img.questions__image(src="img/content/details_map.png" alt="Карта проезда" width="702" height="448")
       .details__bottom
@@ -38,8 +38,10 @@ section.s-details
           p.details__text Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!
           span.details__note Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!
         form.details__form
-          input.details__input.details__input--name.section__input(type="text" placeholder="Имя" minlength="3" maxlength="20")
-          input.details__input.details__input--phone.section__input(type="tel" placeholder="Телефон")
+          label
+            input.details__input.details__input--name.section__input(aria-label="Введите своё имя" type="text" placeholder="Имя" minlength="3" maxlength="20")
+          label
+            input.details__input.details__input--phone.section__input.js-phone__input(aria-label="Введите свой номер телефона" type="tel" placeholder="Телефон")
           button.details__button.section__button(type="submit") Позвоните мне
 
 

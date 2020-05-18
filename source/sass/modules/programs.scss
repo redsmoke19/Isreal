@@ -27,14 +27,12 @@
     width: 198px;
   }
   &__item {
+    color: rgba($base-text-color, 0.87);
     cursor: pointer;
     line-height: 18px;
     padding: 25px 10px 25px 72px;
     position: relative;
-    span {
-      opacity: 0.87;
-    }
-    &:hover span {
+    &:hover {
       color: #ffd701;
     }
     &--active {
@@ -56,7 +54,7 @@
         top: 0;
         z-index: -1;
       }
-      &:hover span {
+      &:hover {
         color: $white;
       }
     }

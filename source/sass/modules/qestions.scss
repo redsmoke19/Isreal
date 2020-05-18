@@ -58,6 +58,13 @@
     cursor: pointer;
     display: flex;
     position: relative;
+    transition: all linear 0.2s;
+    &--active {
+      margin-bottom: 16px;
+      svg {
+        transform: rotate(180deg);
+      }
+    }
   }
   &__number {
     color: $yellow-color;
@@ -72,17 +79,19 @@
     padding-right: 60px;
   }
   &__answer {
-    display: none;
     line-height: 21px;
+    max-height: 0;
     padding-right: 60px;
-    padding-top: 16px;
     opacity: 0.74;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
   }
   &__icon {
     fill: transparent;
-    stroke: $blue-color;
     position: absolute;
     right: 36px;
+    stroke: $blue-color;
     top: calc(50% - 4px);
+    transition: all linear 0.2s;
   }
 }

@@ -60,7 +60,9 @@ gulp.task('script', function () {
 });
 
 var vendorsScripts = [
-  'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js'
+  'node_modules/jquery/dist/jquery.min.js',
+  'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
+  'node_modules/flickity/dist/flickity.pkgd.min.js'
 ];
 
 gulp.task('vendor', function (cb) {
@@ -84,7 +86,6 @@ gulp.task('server', function () {
   gulp.watch('source/img/icon-*.svg', gulp.series('sprite', 'html', 'refresh'));
   gulp.watch('source/**/*.pug', gulp.series('pug', 'refresh'));
   gulp.watch('source/js/**/*.js', gulp.series('script', 'refresh'));
-  // gulp.watch('source/*.html', gulp.series('html', 'refresh'));
 });
 
 gulp.task('refresh', function (done) {
@@ -122,7 +123,7 @@ gulp.task('copy', function () {
     'source/fonts/**/*.{woff,woff2}',
     'source/img/content/**',
     'source/img/*.{png, jpg}',
-    'source/js/vendor/jquery-3.3.1.min.js',
+    // 'source/js/vendor/jquery-3.3.1.min.js',
     'source//*.ico'
   ], {
     base: 'source'

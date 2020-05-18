@@ -104,5 +104,18 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+.overlay {
+  background-color: rgba(#ebebeb, 0.95);
+  bottom: 0;
+  // display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
 //Модули
 @import "modules/modules";
