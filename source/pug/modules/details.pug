@@ -19,16 +19,13 @@ section.s-details
               p.card__address Новосибирск, ул. Щетинкина 68,<br> культурный центр «Бейт Менахем»
               ul.card__social.social
                 li.social__item.card__link
-                  a.social__link
-                    span.visually-hidden Ссылка на facebook
+                  a.social__link(href="https://www.facebook.com/htmlacademy/" aria-label="Ссылка на facebook")
                     +icon('icon-facebook', 'social__icon', '10', '20')
                 li.social__item.card__link
-                  a.social__link
-                    span.visually-hidden Ссылка на WhatsApp
+                  a.social__link(href="#" aria-label="Ссылка на WhatsApp")
                     +icon('icon-whatsapp', 'social__icon', '20', '20')
                 li.social__item.card__link
-                  a.social__link
-                    span.visually-hidden Ссылка на Telegram
+                  a.social__link(href="tg://resolve?domain=htmlacademy" aria-label="Ссылка на Telegram")
                     +icon('icon-telegram', 'social__icon', '22', '18')
           p.details__description Куратор является опытным специалистом агентства Сохнут и знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте подробнее о программах и выберите свою !
         .details__map

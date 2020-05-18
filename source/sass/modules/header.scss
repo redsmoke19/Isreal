@@ -20,15 +20,24 @@
     font-family: $medium-font;
     line-height: 18px;
     text-decoration: none;
+    &:hover {
+      opacity: 0.8;
+    }
     @media screen and (max-width: $tablet-size) {
       order: 2;
     }
   }
   &__callback {
+    border: none;
     border-bottom: 1px dashed $base-text-color;
+    cursor: pointer;
     font-family: $medium-font;
     line-height: 18px;
+    padding: 0;
     text-transform: uppercase;
+    &:hover {
+      opacity: 0.8;
+    }
     @media screen and (max-width: $tablet-size) {
       order: 2;
     }

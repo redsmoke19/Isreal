@@ -1,68 +1,146 @@
 .modal {
-    &-callback {
-        background-color: $white;
-        border-radius: 8px;
-        box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
-        height: 521px;
-        left: calc(50% - 240px);
-        position: fixed;
-        padding: 56px 48px 40px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 480px;
-        z-index: 101;
-        h2 {
-            color: $blue-color;
-            font-family: $title-font;
-            font-size: 28px;
-            line-height: 34px;
-            margin-bottom: 16px;
-        }
-        p {
-            color: rgba($base-text-color, 0.87);
-            font-size: 15px;
-            line-height: 26px;
-            margin-bottom: 32px;
-        }
-        form {
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-        }
-        label {
-            width: 100%;
-            &:not(:last-of-type) {
-                margin-bottom: 8px;
-            }
-            &:last-of-type {
-                margin-bottom: 24px;
-            }
-        }
-        input {
-            background-color: transparent;
-            border: 2px solid #e3e3e3; 
-            border-radius: 80px;
-            font-family: $medium-font;
-            font-size: 17px;
-            line-height: 20px;
-            padding: 20px 40px;
-            text-transform: uppercase;
-            width: 100%;
-            &::placeholder {
-                opacity: 0.5;
-            }
-        }
-        button {
-            background: linear-gradient(146.13deg, #FFC341 20.46%, #FFD701 65.31%);
-            border: none;
-            border-radius: 80px;
-            font-family: $medium-font;
-            font-size: 17px;
-            line-height: 20px;
-            color: $white;
-            padding: 20px 40px;
-            text-transform: uppercase;
-            width: 264px;
-        }
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  left: calc(50% - 240px);
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 480px;
+  z-index: 101;
+  h2 {
+    color: $blue-color;
+    font-family: $title-font;
+    font-size: 28px;
+    line-height: 34px;
+  }
+  p {
+    color: rgba($base-text-color, 0.87);
+    font-size: 15px;
+    line-height: 26px;
+  }
+  &-callback {
+    background-color: $white;
+    border-radius: 8px;
+    display: none;
+    height: auto;
+    padding: 56px 48px 40px;
+    h2 {
+      margin-bottom: 16px;
     }
+    p {
+      margin-bottom: 32px;
+    }
+    form {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+    &__label {
+      width: 100%;
+      &:not(:last-of-type) {
+        margin-bottom: 8px;
+      }
+      &:last-of-type {
+        margin-bottom: 24px;
+      }
+    }
+    &__input {
+      background-color: transparent;
+      border: 2px solid #e3e3e3;
+      border-radius: 80px;
+      font-family: $medium-font;
+      font-size: 17px;
+      line-height: 20px;
+      padding: 20px 40px;
+      text-transform: uppercase;
+      width: 100%;
+      &::placeholder {
+        opacity: 0.5;
+      }
+      &:focus {
+        border-color: #ffc341;
+      }
+    }
+    button {
+      margin-bottom: 16px;
+      width: 264px;
+    }
+    &__footer {
+      position: relative;
+      width: 264px;
+    }
+    &__text {
+      color: rgba($base-text-color, 0.87);
+      cursor: pointer;
+      display: block;
+      font-size: 13px;
+      line-height: 19px;
+      padding-left: 24px;
+    }
+    &__checkbox {
+      + label {
+        &::before {
+          content: "";
+          border: 2px solid $yellow-color;
+          border-radius: 2px;
+          height: 16px;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 16px;
+        }
+      }
+      &:checked {
+        + label {
+          &::after {
+            content: "";
+            border-bottom: 2px solid $yellow-color;
+            border-right: 2px solid $yellow-color;
+            height: 10px;
+            left: 6px;
+            position: absolute;
+            top: 2px;
+            transform: rotate(45deg);
+            width: 5px;
+          }
+        }
+      }
+    }
+  }
+  &-accepted {
+    background-color: $white;
+    display: none;
+    padding: 120px 60px 110px;
+    h2 {
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    p {
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      width: 264px;
+    }
+  }
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    right: 32px;
+    top: 32px;
+  }
+  &__icon {
+    &--close {
+      fill: $yellow-color;
+      &:hover {
+        fill: #ffd701;
+      }
+    }
+    &--accept {
+      display: block;
+      fill: transparent;
+      margin: 0 auto 32px;
+    }
+  }
 }

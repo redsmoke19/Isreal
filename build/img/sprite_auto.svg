@@ -1,9 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow" viewBox="0 0 17 11">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-accept" viewBox="0 0 71 64">
+<rect x="3" y="3" width="58" height="58" rx="29" stroke="#ffc341" stroke-width="6"/>
+<path d="M18 27.88L32.1972 43L66 7" stroke="#ffc341" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="icon-arrow" viewBox="0 0 17 11">
 <path d="M1 1L8.5 9L16 1" stroke-width="2"/>
 </symbol><symbol id="icon-circle_big" viewBox="0 0 76 76">
 <circle cx="38" cy="38" r="37.5" stroke="white" stroke-dasharray="4 4"/>
 </symbol><symbol id="icon-circle_small" viewBox="0 0 54 54">
 <circle cx="27" cy="27" r="26.5" stroke="white"/>
+</symbol><symbol id="icon-close" viewBox="0 0 18 17">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.48467 8.5L0 1.50703L1.41767 2.46254e-07L9 7.08422L16.5823 0L18 1.50703L10.5153 8.5L18 15.493L16.5823 17L9 9.91578L1.41767 17L6.13436e-07 15.493L7.48467 8.5Z"/>
 </symbol><symbol id="icon-facebook" viewBox="0 0 11 22">
 <path d="M8.53782 4.18705H10.4V0.943455C10.0787 0.899255 8.97383 0.799805 7.68704 0.799805C5.00211 0.799805 3.16287 2.48875 3.16287 5.59296V8.44981H0.200012V12.0759H3.16287V21.1998H6.79546V12.0768H9.63848L10.0898 8.45066H6.79461V5.95251C6.79546 4.90445 7.07764 4.18705 8.53782 4.18705Z" fill="black"/>
 </symbol><symbol id="icon-how-to-road__line" viewBox="0 0 2 193">
