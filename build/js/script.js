@@ -133,9 +133,103 @@
     reviewsSlider.on('select', getCurrentReview);
 }
 
+  // function getPopup() {
+  //   var callbackButton = document.querySelector('.header__callback');
+  //   var modalCallback = document.querySelector('.modal-callback');
+  //   var modalAccepted = document.querySelector('.modal-accepted');
+  //   var overlay = document.querySelector('.overlay');  
+  //   var modalSubminButton = document.querySelector('.js-recall-button');
+  //   var callbackCloseButton = document.querySelector('.modal__close--callback');
+  //   var acceptedCloseButton = document.querySelectorAll('.modal__close--accepted');
+  //   var ESC_CODE = 27;
+  //   var ENTER_CODE = 13;
+
+  //   callbackButton.addEventListener('click', function() {
+  //     modalCallback.classList.add('modal--active');
+  //     overlay.style.display = 'block';
+  //     document.body.style.overflow = 'hidden';
+  //   });
+  //   callbackCloseButton.addEventListener('click', function() {
+  //     modalCallback.classList.remove('modal--active');
+  //     overlay.style.display = 'none';
+  //     document.body.style.overflow = 'auto';
+  //   });
+  //   modalSubminButton.addEventListener('click', function() {
+  //     modalCallback.classList.remove('modal--active');
+  //     modalAccepted.classList.add('modal--active');
+  //   });
+  //   acceptedCloseButton.forEach(item => {
+  //     item.addEventListener('click', function() {
+  //       modalAccepted.classList.remove('modal--active');
+  //       overlay.style.display = 'none';
+  //       document.body.style.overflow = 'auto';
+  //     })
+  //   })
+  // }
+
+  function getPopup() {
+    var callbackButton = document.querySelector('.header__callback');
+    var modalCallback = document.querySelector('.modal-callback');
+    var modalAccepted = document.querySelector('.modal-accepted');
+    var overlay = document.querySelector('.overlay');  
+    var modalSubminButton = document.querySelector('.js-recall-button');  
+    var ESC_CODE = 27;
+    var ENTER_CODE = 13;
+
+    function popupInit(modal) {
+      var closeButton = modal.querySelector('.modal__close');
+
+      function openPopup() {
+        modal.classList.add('modal--active');
+        overlay.style.display = 'block';
+        document.addEventListener('keydown', closeEscPopup);
+        document.body.style.overflow = 'hidden';
+        closeButton.addEventListener('click', closePopup);
+        closeButton.addEventListener('keydown', closeEnterPopup);
+        document.addEventListener('click', closeOverlayClickPopup);
+      }
+  
+      function closePopup() {
+        modal.classList.remove('modal--active')
+        overlay.style.display = 'none';
+        document.removeEventListener('keydown', closeEscPopup);
+        document.body.style.overflow = 'auto';
+        closeButton.removeEventListener('keydown', closeEnterPopup);
+        document.removeEventListener('click', closeOverlayClickPopup);
+      }
+
+      function openEnterPopup(evt) {
+        if (evt.keyCode === ENTER_CODE) {
+          openPopup();        
+        }
+      }      
+      function closeEscPopup(evt) {
+        if (evt.keyCode === ESC_CODE) {
+          closePopup();
+        }
+      }
+      function closeEnterPopup(evt) {
+        if (evt.keyCode === ENTER_CODE) {
+          closePopup();
+        }
+      }
+      function closeOverlayClickPopup(evt) {
+        if (evt.target === overlay) {
+          closePopup();
+        }
+      }
+  
+      callbackButton.addEventListener('keydown', openEnterPopup);
+      callbackButton.addEventListener('click', openPopup);
+    }
+  
+    popupInit(modalCallback);
+  }
+
   switchTabs();
   getInputMask();
   getAccordionQuestions();
   getFeedbackSlider();
+  getPopup();
 
 })();

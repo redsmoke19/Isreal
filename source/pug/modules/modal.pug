@@ -6,7 +6,7 @@
       input.modal-callback__input(type="text" aria-label="Введите Ваше имя" minlength="3" maxlength="20" placeholder="Имя")
     label.modal-callback__label
       input.modal-callback__input.js-phone__input(type="tel" aria-label="Введите Ваш номер телефона" placeholder="Телефон")
-    button.section__button.js-recall-button(type="submit") Перезвоните мне
+    button.section__button.js-recall-button(type="button") Перезвоните мне
     .modal-callback__footer
       input.modal-callback__checkbox.visually-hidden(type="checkbox" id="accept" name="accept" value="verification")
       label.modal-callback__text(for="accept") Нажимая на кнопку, вы даёте согласие на обработку персональных данных
@@ -16,6 +16,6 @@
   +icon('icon-accept', 'modal__icon--accept', '66', '64')
   h2 Заявка принята
   p Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!
-  button.section__button.js-agree-button(type="submit") Понятно
+  button.section__button(type="submit") Понятно
   .modal__close(tabindex="0")
     +icon('icon-close', 'modal__icon--close', '18', '18')
