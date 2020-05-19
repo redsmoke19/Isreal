@@ -1,16 +1,18 @@
-header.header
+.wrapper
+  header.header
     .container
-        .header__nav
-            a.header__phone(href="tel:+792726216581") + (972) 2 – 621 – 6581
-            picture
-                source(type="image/webp" srcset="img/content/logo1x.webp, img/content/logo2x.webp 2x")
-                img.header__logo(src="img/content/logo1x.png" srcset="img/content/logo2x.png 2x" alt="Логотип фирмы Маса")
-            button.header__callback заказать звонок
-        .header__hero.hero
-            p.hero__text Учёба, путешествие и карьера для еврейской молодёжи
-            .hero__mouse-scroll
-              +icon('icon-circle_big', 'hero__icon hero__icon--big-circle', '76', '76')
-              +icon('icon-circle_small', 'hero__icon hero__icon--small-circle', '54', '54')
-              +icon('icon-mouse', 'hero__icon hero__icon--mouse', '32', '28')
+      .header__nav
+        a.header__phone(href="tel:+792726216581") + (972) 2 – 621 – 6581
+        picture
+          source(type="image/webp" srcset="img/content/logo1x.webp, img/content/logo2x.webp 2x")
+          img.header__logo(src="img/content/logo1x.png" srcset="img/content/logo2x.png 2x" alt="Логотип фирмы Маса")
+        button.header__callback заказать звонок
+  section.promo
+    .container
+      p.promo__text Учёба, путешествие и карьера для еврейской молодёжи
+      .promo__mouse-scroll
+        +icon('icon-circle_big', 'promo__icon promo__icon--big-circle', '76', '76')
+        +icon('icon-circle_small', 'promo__icon promo__icon--small-circle', '54', '54')
+        +icon('icon-mouse', 'promo__icon promo__icon--mouse', '32', '28')
 
 

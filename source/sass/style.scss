@@ -76,17 +76,20 @@ section {
   position: relative;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
+//.wrapper {
+//  display: flex;
+//  flex-direction: column;
+//  height: 100%;
+//}
 
 .container {
   margin: 0 auto;
   padding: 0 110px;
   position: relative;
   // width: 1366px;
+  @media screen and (max-width: 767px) {
+    padding: 0 16px;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active),

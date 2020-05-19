@@ -1,4 +1,4 @@
-.header {
+.wrapper {
   background-image: url("../img/girl1x.png"), url("../img/izrail_title1x.png"), url("../img/hero_bg1x.png");
   background-position: top, center 80px, top;
   background-size: 100%, 75%, 100%;
@@ -8,12 +8,40 @@
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../img/girl2x.png"), url("../img/izrail_title2x.png"), url("../img/hero_bg2x.png");
   }
+  @media screen and (max-width: 767px) {
+    background-image: url("../img/girl_x1-mobile.png"), url("../img/izrail_title_x1-mobile.png"), url("../img/promo_bg_x1-mobile.png");
+    background-position: top, center 140px, top;
+    background-size: 100%, 100%, 100%;
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/girl_x2-mobile.png"), url("../img/izrail_title_x2-mobile.png"), url("../img/promo_bg_x2-mobile.png");
+    }
+  }
+}
+
+.header {
   &__nav {
     align-items: center;
     display: flex;
     justify-content: space-between;
     padding-bottom: 41%;
     padding-top: 32px;
+    position: relative;
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+      margin-top: 20px;
+      padding: 0;
+    }
+  }
+  &__logo {
+    flex-shrink: 0;
+    height: 48px;
+    width: 137px;
+    @media screen and (max-width: 767px) {
+      flex-basis: 50%;
+      height: 42px;
+      order: 0;
+      width: 120px;
+    }
   }
   &__phone {
     color: $base-text-color;
@@ -23,8 +51,13 @@
     &:hover {
       opacity: 0.8;
     }
-    @media screen and (max-width: $tablet-size) {
+    @media screen and (max-width: 767px) {
+      position: absolute;
+      font-size: 14px;
+      line-height: 17px;
       order: 2;
+      right: 0;
+      top: 0;
     }
   }
   &__callback {
@@ -39,13 +72,21 @@
     &:hover {
       opacity: 0.8;
     }
-    @media screen and (max-width: $tablet-size) {
-      order: 2;
+    @media screen and (max-width: 767px) {
+      bottom: 0;
+      font-size: 14px;
+      line-height: 17px;
+      position: absolute;
+      order: 3;
+      right: 0;
     }
   }
 }
 
-.hero {
+.promo {
+  @media screen and (max-width: 767px) {
+    padding-top: 40%;
+  }
   &__text {
     color: $white;
     font-family: $bold-font;
@@ -55,6 +96,11 @@
     text-align: center;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
     width: 30%;
+    @media screen and (max-width: 767px) {
+      font-size: 20px;
+      line-height: 24px;
+      width: 100%;
+    }
   }
   &__mouse-scroll {
     display: flex;
@@ -114,11 +160,3 @@
     transform: rotate(360deg);
   }
 }
-
-// Тест паттерна для текста
-//.rrr {
-//  fill: url(#pattern);
-//  font-size: 200px;
-//  text-transform: uppercase;
-//  font-family: $header-font;
-//}
