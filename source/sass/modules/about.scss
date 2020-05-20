@@ -1,20 +1,32 @@
 .s-about {
-  //background: url("../img/about_bg.png") center 150px no-repeat;
-  //background-size: 1366px 604px;
-  &::before {
-    background: url("../img/about_bg.png") center no-repeat;
-    background-size: 100% 100%;
-    content: "";
-    height: 604px;
-    position: absolute;
-    left: 0;
-    top: 160px;
-    width: 100%;
-  }
+  background: url("../img/about_bg.png") center center no-repeat;
+  background-size: 100% 100%;
+  padding-bottom: 152px;
+  // &::before {
+  //   background: url("../img/about_bg.png") center no-repeat;
+  //   background-size: 100% 100%;
+  //   content: "";
+  //   height: 604px;
+  //   position: absolute;
+  //   left: 0;
+  //   top: 160px;
+  //   width: 100%;
+  // }
+  @media screen and (max-width: 767px) {
+    background-size: 100% 60%;
+    background-position-y: bottom;
+    margin-bottom: 80px;
+    padding-bottom: 0;
+    .container {
+      padding: 0;
+    }
+  }  
 }
 
 .about {
-  padding-bottom: 200px;
+  @media screen and (max-width: 767px) {
+    padding-bottom: 0;
+  }
   &__title {
     margin-bottom: 24px;
     text-align: center;
@@ -25,10 +37,19 @@
     margin-bottom: 48px;
     padding: 0 213px;
     text-align: center;
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      line-height: 26px;
+      padding: 0 16px;
+      text-align: left;
+    }
   }
   &__video {
     padding: 0 140px;
     position: relative;
+    @media screen and (max-width: 767px) {
+      padding: 0;
+    }
   }
   &__image {
     width: 100%;
@@ -46,6 +67,12 @@
       opacity: 0.32;
       top: calc(50% - 48px);
       width: 96px;
+      @media screen and (max-width: 767px) {
+        height: 80px;
+        left: calc(50% - 40px);
+        top: calc(50% - 40px);
+        width: 80px;
+      }
     }
     &::after {
       background-color: $white;
@@ -57,6 +84,12 @@
       top: calc(50% - 32px);
       transition: all linear 0.15s;
       width: 64px;
+      @media screen and (max-width: 767px) {
+        height: 54px;
+        left: calc(50% - 27px);
+        top: calc(50% - 27px);
+        width: 54px;
+      }
     }
     &:hover {
       &::after {

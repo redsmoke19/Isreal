@@ -40,15 +40,69 @@
       </section>
     </div>
     <main class="content">
-      <!--include modules/about-->
-      <!--include modules/programs-->
-      <!--include modules/to-go-->
-      <!--include modules/to-road-->
-      <!--include modules/life-->
-      <!--include modules/view-photo-->
-      <!--include modules/questions-->
-      <!--include modules/feedback-->
-      <!--include modules/details-->
+      <section class="s-about">
+        <div class="container">
+          <div class="about">
+            <h2 class="about__title section__title">О программе</h2>
+            <p class="about__description">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле.В течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
+            <div class="about__video">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/content/about1x-mobile.webp, img/content/about2x-mobile.webp 2x">
+                <source type="image/webp" srcset="img/content/about1x.webp, img/content/about2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/content/about1x-mobile.png 1x, img/content/about2x-mobile.png 2x"><img class="about__image" src="img/content/about1x.png" srcset="img/content/about2x.png 2x" alt="Превью видео" width="870" height="460">
+              </picture>
+              <div class="about__button">
+                <svg class="svg-sprite-icon icon-icon-play about__icon" width="15" height="19">
+                  <use xlink:href="img/sprite_auto.svg#icon-play"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s-programs">
+        <div class="container">
+          <div class="programs">
+            <h2 class="programs__title section__title">Програмы</h2>
+            <div class="pragrams__tabs tabs">
+              <ul class="tabs__list">
+                <li class="tabs__item tabs__item--active" data-tab-name="tabs__general">Общие</li>
+                <li class="tabs__item" data-tab-name="tabs__academic">Академические</li>
+                <li class="tabs__item" data-tab-name="tabs__internship">Стажировка</li>
+                <li class="tabs__item" data-tab-name="tabs__volunteering">Волонтёрство</li>
+                <li class="tabs__item" data-tab-name="tabs__religion">Религиозные</li>
+              </ul>
+              <div class="tabs__content">
+                <div class="tabs__inset tabs__general tabs__inset--active">
+                  <h3 class="tabs__title">Общие</h3>
+                  <p class="tabs__description">Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования. </p>
+                  <p class="tabs__description">Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.</p>
+                </div>
+                <div class="tabs__inset tabs__academic">
+                  <h3 class="tabs__title">Академические</h3>
+                  <p class="tabs__description">is ullam earum ratione! Veritatis ad repellendus a soluta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus reprehenderit dolore, totam repudiandae placeat ratione tempora corrupti, laboriosam nemo natus provident hic ex officiis alias eveniet cumque magni dignissimos! Aperiam. </p>
+                  <p class="tabs__description">Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.</p>
+                </div>
+                <div class="tabs__inset tabs__internship">
+                  <h3 class="tabs__title">Стажировка</h3>
+                  <p class="tabs__description">Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования. </p>
+                  <p class="tabs__description">Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.</p>
+                  <p class="tabs__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam, velit amet ratione qui sed esse beatae fugit dolorum, illum placeat! Ea voluptas nostrum delectus dolorum a harum est autem!</p>
+                </div>
+                <div class="tabs__inset tabs__volunteering">
+                  <h3 class="tabs__title">Волонтёрство</h3>
+                  <p class="tabs__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi velit voluptatibus eos ab ex maxime repudiandae minus placeat, sint amet voluptate natus id. Magni harum praesentium delectus! Magni, inventore nisi.</p>
+                  <p class="tabs__description">Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.</p>
+                </div>
+                <div class="tabs__inset tabs__religion">
+                  <h3 class="tabs__title">Религиозные</h3>
+                  <p class="tabs__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam a atque, culpa inventore nemo sed aperiam voluptatem illo vitae fugit veniam quos maxime et hic commodi? Modi rerum laudantium molestias. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, beatae, iusto asperiores animi fugiat maxime, ea quo voluptatibus repudiandae alias id maiores nihil architecto nobis praesentium labore saepe voluptates quam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur libero ducimus odio maiores eius nihil repellat eum veritatis quis. Sapiente labore quo, facilis ullam impedit maiores doloribus molestiae soluta.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!--include ../modules/footer-->
     <div class="modal">

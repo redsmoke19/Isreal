@@ -62,7 +62,8 @@ gulp.task('script', function () {
 var vendorsScripts = [
   'node_modules/jquery/dist/jquery.min.js',
   'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
-  'node_modules/flickity/dist/flickity.pkgd.min.js'
+  'node_modules/flickity/dist/flickity.pkgd.min.js',
+  'node_modules/slick-carousel/slick/slick.min.js'
 ];
 
 gulp.task('vendor', function (cb) {

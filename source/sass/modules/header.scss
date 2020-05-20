@@ -12,6 +12,7 @@
     background-image: url("../img/girl_x1-mobile.png"), url("../img/izrail_title_x1-mobile.png"), url("../img/promo_bg_x1-mobile.png");
     background-position: top, center 140px, top;
     background-size: 100%, 100%, 100%;
+    margin-bottom: 0;
     @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/girl_x2-mobile.png"), url("../img/izrail_title_x2-mobile.png"), url("../img/promo_bg_x2-mobile.png");
     }
@@ -85,7 +86,7 @@
 
 .promo {
   @media screen and (max-width: 767px) {
-    padding-top: 40%;
+    padding-top: 265px;
   }
   &__text {
     color: $white;

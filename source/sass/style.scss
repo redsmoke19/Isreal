@@ -86,9 +86,10 @@ section {
   margin: 0 auto;
   padding: 0 110px;
   position: relative;
-  // width: 1366px;
+  width: 1366px;
   @media screen and (max-width: 767px) {
     padding: 0 16px;
+    width: 100%;
   }
 }
 

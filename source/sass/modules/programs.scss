@@ -1,30 +1,109 @@
 .s-programs {
-  &::before {
-    background: url("../img/programs_bg.png") center no-repeat;
-    background-size: cover;
-    content: "";
-    height: 426px;
-    position: absolute;
-    right: 0;
-    top: -65px;
-    width: 680px;
+  background: url("../img/programs_bg.png") top right no-repeat;
+  background-size: 680px 426px;
+  padding-top: 48px;
+  // &::before {
+  //   background: url("../img/programs_bg.png") center no-repeat;
+  //   background-size: cover;
+  //   content: "";
+  //   height: 426px;
+  //   position: absolute;
+  //   right: 0;
+  //   top: -65px;
+  //   width: 680px;
+  // }
+  @media screen and (max-width: 767px) {
+    background: url("../img/programs_bg-mobile.png") no-repeat;
+    background-position: 100% 35%;
+    background-size: 320px 201px;
+    padding-top: 48px;
   }
 }
 
 .programs {
   margin-bottom: 240px;
   padding-left: 100px;
+  @media screen and (max-width: 767px) {
+    padding: 0;
+  }
   &__title {
     margin-bottom: 83px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 16px;
+    }
   }
 }
 
 .tabs {
   display: flex;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
   &__list {
     flex-shrink: 0;
     margin-right: 94px;
     width: 198px;
+    @media screen and (max-width: 767px) {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+  &__dots {
+    @media screen and (max-width: 767px) {
+      position: absolute;
+      bottom: -25px;
+      list-style: none;
+      display: block;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      li {
+        position: relative;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+        button {
+          border: 0;
+          background: 0 0;
+          display: block;
+          height: 20px;
+          width: 20px;
+          outline: 0;
+          line-height: 0;
+          font-size: 0;
+          color: transparent;
+          padding: 5px;
+          cursor: pointer;
+          &::before {
+            border-radius: 50%;
+            position: absolute;
+            top: calc(50% - 3px);
+            left: calc(50% - 3px);
+            content: "";
+            width: 6px;
+            height: 6px;
+            text-align: center;
+            background-color: $base-text-color;
+            opacity: 0.2;
+            -webkit-font-smoothing: antialiased;
+          }
+        }
+      }
+      .slick-active {
+        button::before {
+          background-color: $yellow-color;
+          height: 8px;
+          opacity: 1;
+          width: 8px;
+          top: calc(50% - 4px);
+          left: calc(50% - 4px);
+        }
+      }
+    }
   }
   &__item {
     color: rgba($base-text-color, 0.87);
@@ -32,6 +111,11 @@
     line-height: 18px;
     padding: 25px 10px 25px 72px;
     position: relative;
+    @media screen and (max-width: 767px) {
+      font-size: 15px;
+      line-height: 18px;
+      padding: 15px 12px 15px 70px;
+    }
     &:hover {
       color: #ffd701;
     }
@@ -44,6 +128,11 @@
       line-height: 19px;
       position: relative;
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+      @media screen and (max-width: 767px) {
+        border-radius: 60px;
+        font-size: 16px;
+        line-height: 19px;
+      }
       &::after {
         content: "";
         border-style: solid;
@@ -53,6 +142,9 @@
         right: -37px;
         top: 0;
         z-index: -1;
+        @media screen and (max-width: 767px) {
+          display: none;
+        }
       }
       &:hover {
         color: $white;
@@ -144,6 +236,10 @@
     padding-right: 190px;
     padding-top: 16px;
     opacity: 0.87;
+    @media screen and (max-width: 767px) {
+      padding: 0;
+      padding-top: 20px;
+    }
     &--active {
       display: block;
     }
@@ -156,9 +252,14 @@
     margin-bottom: 24px;
   }
   &__description {
+    color: rgba($base-text-color, 0.87);
     line-height: 26px;
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 22px;
     }
   }
 }
