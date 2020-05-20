@@ -21,9 +21,10 @@
 }
 
 .programs {
-  margin-bottom: 240px;
+  margin-bottom: 35px;
   padding-left: 100px;
   @media screen and (max-width: 767px) {
+    margin-bottom: 80px;
     padding: 0;
   }
   &__title {
@@ -51,7 +52,7 @@
   &__dots {
     @media screen and (max-width: 767px) {
       position: absolute;
-      bottom: -25px;
+      bottom: -30px;
       list-style: none;
       display: block;
       text-align: center;
@@ -111,6 +112,7 @@
     line-height: 18px;
     padding: 25px 10px 25px 72px;
     position: relative;
+    outline: none;
     @media screen and (max-width: 767px) {
       font-size: 15px;
       line-height: 18px;
