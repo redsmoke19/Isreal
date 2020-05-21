@@ -2,13 +2,13 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1365px) {
     flex-direction: column;
   }
   &__picture {
     flex-basis: 32.2%;
     flex-shrink: 0;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1365px) {
       display: flex;
       flex-basis: 100%;
       justify-content: center;
@@ -28,7 +28,7 @@
     flex-basis: 63.7%;
     flex-direction: column;
     padding-right: 40px;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1365px) {
       flex-basis: 100%;
       padding-right: 0;
     }
@@ -40,7 +40,7 @@
     margin-bottom: 8px;
     padding-top: 40px;
     opacity: 0.74;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1365px) {
       padding: 0;
     }
   }
@@ -49,7 +49,7 @@
     display: flex;
     line-height: 21px;
     margin-bottom: 32px;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1365px) {
       align-items: flex-start;
       flex-direction: column;
       font-size: 14px;
@@ -66,7 +66,7 @@
   }
   &__review {
     margin-bottom: 20px;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1365px) {
       margin-bottom: 22px;
     }
   }
@@ -80,7 +80,7 @@
     }
     &:not(:last-child) {
       margin-bottom: 16px;
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 1365px) {
         margin-bottom: 24px;
       }
     }
@@ -102,7 +102,7 @@
     display: flex;
     justify-content: flex-end;
     margin-top: auto;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1365px) {
       justify-content: flex-start;
     }
   }
@@ -113,11 +113,14 @@
     z-index: 10;
     bottom: 0;
     left: 38%;
-    @media screen and (max-width: 767px) {
-      top: 400px;
+    @media screen and (max-width: 1365px) {
       left: 50%;
       bottom: auto;
+      top: 550px;
       transform: translateX(-50%);
+    }
+    @media screen and (max-width: 767px) {
+      top: 400px;
     }
   }
   &__page-count {

@@ -37,6 +37,9 @@
     margin-bottom: 48px;
     padding: 0 213px;
     text-align: center;
+    @media screen and (max-width: 1365px) {
+      padding: 0;
+    }
     @media screen and (max-width: 767px) {
       font-size: 16px;
       line-height: 26px;
@@ -47,7 +50,7 @@
   &__video {
     padding: 0 140px;
     position: relative;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1365px) {
       padding: 0;
     }
   }

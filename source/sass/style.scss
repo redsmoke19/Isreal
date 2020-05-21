@@ -87,6 +87,10 @@ section {
   padding: 0 110px;
   position: relative;
   width: 1366px;
+  @media screen and (max-width: 1365px) {
+    padding: 0 90px;
+    width: 100%;
+  }
   @media screen and (max-width: 767px) {
     padding: 0 16px;
     width: 100%;
@@ -111,7 +115,7 @@ input[type="radio"].visually-hidden {
 .overlay {
   background-color: rgba(#ebebeb, 0.95);
   bottom: 0;
-   display: none;
+  display: none;
   height: 100%;
   left: 0;
   position: fixed;
