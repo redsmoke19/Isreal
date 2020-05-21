@@ -88,7 +88,7 @@
         questionAnswer.style.maxHeight = questionAnswer.scrollHeight + "px";
       }
     })
-  });
+  })
   }
 
   function getFeedbackSlider() {
@@ -96,7 +96,7 @@
     var reviewsSlider = new Flickity(reviewsList, {
       pageDots: false,
       prevNextButtons: false,
-      draggable: false,
+      draggable: true,
     });
     var counter = document.querySelector('.slider__page-count');
 
@@ -207,52 +207,52 @@
   }
 
   function getSlickSlider() {
-    if (window.matchMedia("(max-width: 767px)").matches) {
-      // $('.tabs__content').slick({
-      //   dots: false,
-      //   slidesToShow: 1,
-      //   slidesToScroll: 1,
-      //   arrows: false,
-      //   fade: true,
-      //   mobileFirst: true,
-      //   asNavFor: '.tabs__list',
-      //   infinite: false,
-      //   responsive: [
-      //     {
-      //       breakpoint: 320
-      //     },
-      //     {
-      //       breakpoint: 768,
-      //       settings: 'unslick'
-      //     }
-      //   ]
-      // });
+    // $('.tabs__content').slick({
+    //   dots: false,
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1,
+    //   arrows: false,
+    //   fade: true,
+    //   mobileFirst: true,
+    //   asNavFor: '.tabs__list',
+    //   infinite: false,
+    //   responsive: [
+    //     {
+    //       breakpoint: 320,
+    //     },
+    //     {
+    //       breakpoint: 768,
+    //       settings: 'unslick',
+    //     }
+    //   ]
+    // });
 
-      $('.tabs__list').slick({
-        mobileFirst: true,
-        dotsClass: 'tabs__dots',
-        dots: true,
-        arrows: false,
-        // asNavFor: '.tabs__content',
-        infinite: false,
-        responsive: [
-          {
-            breakpoint: 320,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: 'unslick'
+    $('.tabs__list').slick({
+      mobileFirst: true,
+      dotsClass: 'tabs__dots',
+      dots: true,
+      arrows: false,
+      // asNavFor: '.tabs__content',
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 320,
+          settings: {
+            slidesToShow: 1,
+            slidesToShow: 1,
+            slidesToScroll: 1,
           }
-        ]
-      });
-    }
+        },
+        {
+          breakpoint: 768,
+          settings: 'unslick',
+        }
+      ]
+    });
   }
 
-  if (window.matchMedia("(min-width: 768px)").matches) {
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    getSlickSlider();
   }
 
   (function () {
@@ -262,28 +262,27 @@
     var resizeTimeout;
 
     function resizeThrottler() {
-      if (!resizeTimeout) {
-        resizeTimeout = setTimeout(function () {
-          resizeTimeout = null;
-          actualResizeHandler();
-        }, 66);
-      }
+        if (!resizeTimeout) {
+            resizeTimeout = setTimeout(function () {
+                resizeTimeout = null;
+                actualResizeHandler();
+            }, 66);
+        }
     }
 
     function actualResizeHandler() {
-      if (window.matchMedia("(min-width: 768px)").matches) {
-        $('.tabs__content').slick('unslick');
-        $('.tabs__list').slick('unslick');
-      }
+        if (window.matchMedia("(min-width: 768px)").matches) {
+          $('.tabs__content').slick('unslick');
+          $('.tabs__list').slick('unslick');
+        }
     }
 
   }());
 
   switchTabs();
-  getSlickSlider();
   getInputMask();
-  // getAccordionQuestions();
-  // getFeedbackSlider();
+  getAccordionQuestions();
+  getFeedbackSlider();
   // getPopup();
 
 })();

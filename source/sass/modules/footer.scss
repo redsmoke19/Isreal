@@ -1,15 +1,41 @@
 .footer {
   border-top: 1px solid rgba($base-text-color, 0.2);
+  @media screen and (max-width: 767px) {
+    .social__icon--facebook {
+      height: 27.2px;
+      width: 13.3px;
+    }
+    .social__icon--twitter {
+      height: 24px;
+      width: 30px;
+    }
+    .social__icon--insta {
+      height: 26px;
+      width: 26px;
+    }
+  }
   &__inner {
     align-items: center;
     display: flex;
     justify-content: space-between;
     padding: 24px 0;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      padding: 32px 0;
+    }
+  }
+  &__logo {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 24px;
+    }
   }
   &__copyright {
     font-size: 12px;
     line-height: 18px;
     opacity: 0.5;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 28px;
+    }
   }
   &__social {
     align-items: center;

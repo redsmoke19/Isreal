@@ -72,8 +72,16 @@
   display: flex;
   margin-bottom: 32px;
   padding-right: 75px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    padding-right: 0;
+  }
   &__picture {
     margin-right: 20px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 16px;
+      margin-right: 0;
+    }
   }
   &__info {
     display: flex;
@@ -83,6 +91,10 @@
     display: flex;
     line-height: 22px;
     margin-bottom: 12px;
+    @media screen and (max-width: 767px) {
+      font-size: 15px;
+      line-height: 22px;
+    }
     &--title {
       color: $blue-color;
       margin-right: 8px;
@@ -96,6 +108,9 @@
     line-height: 19px;
     margin-bottom: 10px;
     opacity: 0.74;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 12px;
+    }
   }
   &__social {
     display: flex;

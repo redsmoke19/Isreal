@@ -1,7 +1,7 @@
 .s-to-go {
-  background: url("../img/to-go_bg.png") no-repeat;
-  background-size: 818px 594px;
-  background-position: top right;
+  // background: url("../img/to-go_bg.png") no-repeat;
+  // background-size: 818px 594px;
+  // background-position: top right;
   padding-top: 205px;
   padding-bottom: 130px;
   //&::before {
@@ -29,8 +29,8 @@
     }
   }
   @media screen and (max-width: 767px) {
-    background-size: 424px 308px;
-    background-position: center bottom;
+    // background-size: 424px 308px;
+    // background-position: center bottom;
     padding: 0;
   }
 }
@@ -38,6 +38,26 @@
 .to-go {
   margin-bottom: 192px;
   padding-left: 100px;
+  &::before {
+   background: url("../img/to-go_bg.png") center no-repeat;
+   background-size: cover;
+   content: "";
+   height: 594px;
+   position: absolute;
+   right: 0;
+   top: -213px;
+   width: 818px;
+   z-index: -1;
+   @media screen and (max-width: 767px) {
+     height: 308px;
+     width: 320px;
+     bottom: 0;
+     top: auto;     
+     left: 50%;
+    transform: translateX(-50%);
+   }
+
+  }
   @media screen and (max-width: 767px) {
     margin-bottom: 80px;
     padding: 0 0 308px 0;

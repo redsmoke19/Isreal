@@ -6,12 +6,12 @@ section.s-details
           h2.section__title.details__title Узнать подробности
           .details__your-city
             span.details__your-city--title Ваш город:
-            a.details__your-city--name Новосибирск
+            a(href="#").details__your-city--name Новосибирск
           .details__card.card
             .card__picture
               picture
                 source(type="image/webp" srcset="img/content/card_photo_x1.webp, img/content/card_photo_x2.webp 2x")
-                img.questions__image(src="img/content/card_photo_x1.png" srcset="img/content/card_photo_x2 2x" alt="Фотография девушек, обсуждающих вопросы" width="112" height="112")
+                img.card__image(src="img/content/card_photo_x1.png" srcset="img/content/card_photo_x2 2x" alt="Фотография девушек, обсуждающих вопросы" width="112" height="112")
             .card__info
               .card__curator
                 span.card__curator--title Ваш куратор:
@@ -29,7 +29,9 @@ section.s-details
                     +icon('icon-telegram', 'social__icon', '22', '18')
           p.details__description Куратор является опытным специалистом агентства Сохнут и знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте подробнее о программах и выберите свою !
         .details__map
-          img.questions__image(src="img/content/details_map.png" alt="Карта проезда" width="702" height="448")
+          picture
+            source(media="(max-width: 767px)" srcset="img/content/details_map-mobile.png")
+            img.details__image(src="img/content/details_map.png" alt="Карта проезда" width="702" height="448")
       .details__bottom
         .details__information
           p.details__text Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!
@@ -40,6 +42,4 @@ section.s-details
           label
             input.details__input.details__input--phone.section__input.js-phone__input(aria-label="Введите свой номер телефона" type="tel" placeholder="Телефон")
           button.details__button.section__button(type="submit") Позвоните мне
-
-
 

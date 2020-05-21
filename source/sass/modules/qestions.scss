@@ -1,18 +1,29 @@
 .s-questions {
+  background: url("../img/questions_bg.png") top no-repeat;
+  background-size: 100% 850px;
   margin-bottom: 128px;
+  padding-top: 65px;
+  @media screen and (max-width: 767px) {
+    background-image: none;
+    margin-bottom: 80px;
+    padding-top: 0;
+  }
   .container {
     padding-right: 0;
+    @media screen and (max-width: 767px) {
+      padding-right: 16px;
+    }
   }
-  &::before {
-    background: url("../img/questions_bg.png") center no-repeat;
-    background-size: 100% 100%;
-    content: "";
-    height: 1119px;
-    position: absolute;
-    right: 0;
-    top: -79px;
-    width: 100%;
-  }
+  // &::before {
+  //   background: url("../img/questions_bg.png") center no-repeat;
+  //   background-size: 100% 100%;
+  //   content: "";
+  //   height: 1119px;
+  //   position: absolute;
+  //   right: 0;
+  //   top: -79px;
+  //   width: 100%;
+  // }
   &::after {
     background: url("../img/questions_bag.png") center no-repeat;
     content: "";
@@ -21,6 +32,9 @@
     left: 0;
     top: 727px;
     width: 153px;
+    @media screen and (max-width: 767px) {
+      top: 600px;
+    }
   }
 }
 
@@ -29,15 +43,25 @@
   justify-content: space-between;
   &__title {
     margin-bottom: 32px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 24px;
+      text-align: center;
+    }
   }
   &__inner {
     flex-basis: 45.2%;
     //margin-right: 51px;
     width: 100%;
+    @media screen and (max-width: 767px) {
+      flex-basis: 100%;
+    }
   }
   &__picture {
     flex-basis: 52%;
     flex-shrink: 0;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
   &__image {
     height: auto;
@@ -72,11 +96,19 @@
     font-size: 28px;
     line-height: 48px;
     margin-right: 16px;
+    @media screen and (max-width: 767px) {
+
+    }
   }
   &__text {
     font-size: 17px;
     line-height: 25px;
     padding-right: 60px;
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      line-height: 26px;
+      padding-right: 30px;
+    }
   }
   &__answer {
     line-height: 21px;
@@ -85,6 +117,9 @@
     opacity: 0.74;
     overflow: hidden;
     transition: all 0.2s ease-out;
+    @media screen and (max-width: 767px) {
+      padding-right: 0;
+    }
   }
   &__icon {
     fill: transparent;
@@ -93,5 +128,8 @@
     stroke: $blue-color;
     top: calc(50% - 4px);
     transition: all linear 0.2s;
+    @media screen and (max-width: 767px) {
+      right: 0;
+    }
   }
 }

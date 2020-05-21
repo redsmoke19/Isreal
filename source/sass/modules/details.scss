@@ -1,6 +1,15 @@
 .s-details {
+  background: url("../img/details_bg.png") no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  @media screen and (max-width: 767px) {
+    background-image: none;
+  }
   .container {
     padding-right: 0;
+    @media screen and (max-width: 767px) {
+      padding: 0;
+    }
   }
 }
 
@@ -8,22 +17,41 @@
   &__top {
     display: flex;
     margin-bottom: 64px;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+  }
+  &__info {
+    @media screen and (max-width: 767px) {
+      padding: 0 16px;
+    }
   }
   &__title {
     margin-bottom: 48px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 24px;
+      text-align: center;
+    }
   }
   &__your-city {
     color: rgba($base-text-color, 0.74);
     line-height: 22px;
     display: flex;
     margin-bottom: 39px;
+    @media screen and (max-width: 767px) {
+      font-size: 15px;
+      line-height: 22px;
+    }
     &--name {
       border-bottom: 1px dashed $blue-color;
+      color: rgba($base-text-color, 0.87);
       cursor: pointer;
       font-family: $medium-font;
       margin-left: 16px;
       text-transform: uppercase;
       transition: opacity linear 0.15s;
+      text-decoration: none;
       &:hover {
         opacity: 0.5;
       }
@@ -34,9 +62,23 @@
     line-height: 29px;
     padding-right: 75px;
     opacity: 0.87;
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 40px;
+      padding-right: 0;
+    }
   }
   &__map {
     flex-shrink: 0;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 24px;
+    }
+  }
+  &__image {
+    @media screen and (max-width: 767px) {
+      height: auto;
+    }
   }
   &__bottom {
     align-items: flex-start;
@@ -44,6 +86,11 @@
     justify-content: space-between;
     margin-bottom: 72px;
     padding-right: 110px;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      margin-bottom: 64px;
+      padding: 0 16px;
+    }
   }
   &__information {
     display: flex;
@@ -51,6 +98,10 @@
     flex-direction: column;
     flex-shrink: 0;
     margin-right: 14px;
+    @media screen and (max-width: 767px) {
+      flex-basis: 100%;
+      margin: 0 0 32px 0;
+    }
   }
   &__text {
     font-family: $medium-font;
@@ -58,6 +109,10 @@
     line-height: 25px;
     margin-bottom: 12px;
     opacity: 0.87;
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
   &__note {
     font-size: 13px;
@@ -68,18 +123,35 @@
     align-items: center;
     display: flex;
     flex-basis: 100%;
-    //justify-content: space-between;
     justify-content: flex-end;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      width: 100%;
+      label {
+        width: 100%;
+      }
+    }
   }
   &__input {
-    //width: 31.6%;
     margin-right: 24px;
     padding: 20px 40px;
     width: 250px;
+    @media screen and (max-width: 767px) {
+      margin: 0;
+      width: 100%;
+      &--name {
+        margin-bottom: 8px;
+      }
+      &--phone {
+        margin-bottom: 24px;
+      }
+    }
   }
   &__button {
-    //width: 27.4%;
     width: 216px;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
   }
 
 }
