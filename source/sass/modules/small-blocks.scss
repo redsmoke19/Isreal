@@ -72,7 +72,7 @@
   display: flex;
   margin-bottom: 32px;
   padding-right: 75px;
-  @media screen and (max-width: 1365px) {
+  @media screen and (max-width: 1023px) {
     align-items: center;
     flex-direction: column;
     padding-right: 0;
@@ -82,7 +82,7 @@
   }
   &__picture {
     margin-right: 20px;
-    @media screen and (max-width: 1365px) {
+    @media screen and (max-width: 1023px) {
       margin-bottom: 20px;
       margin-right: 0;
     }
@@ -91,7 +91,7 @@
     }
   }
   &__image {
-    @media screen and (max-width: 1365px) {
+    @media screen and (max-width: 1023px) {
       height: auto;
       width: 224px;
     }

@@ -257,7 +257,7 @@
           }
         },
         {
-          breakpoint: 1366,
+          breakpoint: 1024,
           settings: 'unslick',
         }
       ]
@@ -267,7 +267,7 @@
   if (window.matchMedia("(max-width: 767px)").matches) {
     getSlickSlider();
   }
-  if (window.matchMedia("(max-width: 1365px)").matches) {
+  if (window.matchMedia("(max-width: 1023px)").matches) {
     getPhotoMobileSlider();
   }
 
@@ -289,12 +289,12 @@
     function actualResizeHandler() {
       var lifeMobile = document.querySelector('.life__mobile');
       var desktopImages = document.querySelector('.life__images');
-      if (window.matchMedia("(max-width: 1365px)").matches) {
+      if (window.matchMedia("(max-width: 1023px)").matches) {
         if (!lifeMobile) {
           getPhotoMobileSlider();
         }
       }
-      if (window.matchMedia("(min-width: 1366px)").matches) {
+      if (window.matchMedia("(min-width: 1024px)").matches) {
         if (lifeMobile) {
           lifeMobile.remove();
           desktopImages.style.display = 'flex';

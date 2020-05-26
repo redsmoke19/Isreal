@@ -86,7 +86,8 @@ section {
   margin: 0 auto;
   padding: 0 110px;
   position: relative;
-  width: 1366px;
+  width: 100%;
+  max-width: 1366px;
   @media screen and (max-width: 1365px) {
     padding: 0 90px;
     width: 100%;

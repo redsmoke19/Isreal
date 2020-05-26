@@ -8,10 +8,10 @@
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../img/girl2x.png"), url("../img/izrail_title2x.png"), url("../img/hero_bg2x.png");
   }
-  @media screen and (max-width: 1365px) {
-    height: auto;
-  }
-  @media screen and (max-width: 767px) {
+  //@media screen and (max-width: 1365px) {
+  //  height: auto;
+  //}
+  @media screen and (max-width: 1023px) {
     background-image: url("../img/girl_x1-mobile.png"), url("../img/izrail_title_x1-mobile.png"), url("../img/promo_bg_x1-mobile.png");
     background-position: top, center 140px, top;
     background-size: 100%, 100%, 100%;
@@ -49,7 +49,6 @@
         width: 120px;
       }
     }
-    
   }
   &__phone {
     color: $base-text-color;
@@ -92,8 +91,8 @@
 }
 
 .promo {
-  padding-top: 31%;
-  @media screen and (max-width: 1365px) {
+  padding-top: 25%;
+  @media screen and (max-width: 1023px) {
     padding-top: 18%;
   }
   @media screen and (max-width: 767px) {
@@ -107,7 +106,7 @@
     margin: 0 auto 32px auto;
     text-align: center;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
-    width: 30%;
+    width: 40%;
     @media screen and (max-width: 1365px) {
       width: 60%;
     }
@@ -120,7 +119,10 @@
   &__mouse-scroll {
     display: flex;
     justify-content: center;
+    height: 76px;
+    margin: 0 auto;
     position: relative;
+    width: 76px;
     @media screen and (max-width: 1365px) {
       padding-bottom: 30%;
     }

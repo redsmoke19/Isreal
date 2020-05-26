@@ -1,6 +1,6 @@
 .view-photo {
   margin-bottom: 57px;
-  @media screen and (max-width: 1365px) {
+  @media screen and (max-width: 1023px) {
     margin-bottom: 80px;
   }
   @media screen and (max-width: 767px) {
@@ -19,7 +19,7 @@
     position: absolute;
     top: 0;
     width: 96%;
-    @media screen and (max-width: 1165px) {
+    @media screen and (max-width: 1023px) {
       padding: 10% 50px 0 0;
       right: 0;
       width: 70%;
@@ -36,7 +36,7 @@
   }
   &__title {
     margin-bottom: 24px;
-    @media screen and (max-width: 1165px) {
+    @media screen and (max-width: 1023px) {
       text-align: right;
     }
     @media screen and (max-width: 767px) {
@@ -51,7 +51,7 @@
     margin-bottom: 48px;
     opacity: 0.87;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
-    @media screen and (max-width: 1165px) {
+    @media screen and (max-width: 1023px) {
       margin-bottom: 24px;
       text-align: right;
     }
@@ -69,7 +69,7 @@
     height: 60px;
     padding: 0;
     width: 57.4%;
-    @media screen and (max-width: 1165px) {
+    @media screen and (max-width: 1023px) {
       margin-left: auto;
     }
     @media screen and (max-width: 767px) {
