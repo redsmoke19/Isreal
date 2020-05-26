@@ -1,4 +1,4 @@
-.s-details {
+.details {
   background: url("../img/details_bg.png") no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -11,9 +11,6 @@
       padding: 0;
     }
   }
-}
-
-.details {
   &__top {
     display: flex;
     margin-bottom: 64px;
@@ -185,5 +182,4 @@
       width: 100%;
     }
   }
-
 }

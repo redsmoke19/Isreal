@@ -1,33 +1,22 @@
-.s-programs {
+.programs {
   background: url("../img/programs_bg.png") top right no-repeat;
   background-size: 680px 426px;
   padding-top: 48px;
-  // &::before {
-  //   background: url("../img/programs_bg.png") center no-repeat;
-  //   background-size: cover;
-  //   content: "";
-  //   height: 426px;
-  //   position: absolute;
-  //   right: 0;
-  //   top: -65px;
-  //   width: 680px;
-  // }
   @media screen and (max-width: 767px) {
     background: url("../img/programs_bg-mobile.png") no-repeat;
     background-position: 100% 35%;
     background-size: 320px 201px;
     padding-top: 48px;
   }
-}
-
-.programs {
-  margin-bottom: 35px;
-  padding-left: 100px;
-  @media screen and (max-width: 1365px) {
-    padding: 0;
-  }
-  @media screen and (max-width: 767px) {
-    margin-bottom: 80px;
+  &__content {
+    margin-bottom: 35px;
+    padding-left: 100px;
+    @media screen and (max-width: 1365px) {
+      padding: 0;
+    }
+    @media screen and (max-width: 767px) {
+      margin-bottom: 80px;
+    }
   }
   &__title {
     margin-bottom: 83px;

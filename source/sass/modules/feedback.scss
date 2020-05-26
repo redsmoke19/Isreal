@@ -1,4 +1,4 @@
-.s-feedback {
+.feedback {
     background: url("../img/slider-sketch_bg.png"), url("../img/slider_bg.png");
     background-repeat: no-repeat;
     background-position: center right, center center;
@@ -9,25 +9,13 @@
       background-size: 535px 318px, 100% 234px;
       margin-bottom: 78px;
     }
-  // &::before {
-  //   background: url("../img/slider_bg.png") center no-repeat;
-  //   background-size: 100% 100%;
-  //   content: "";
-  //   height: 527px;
-  //   position: absolute;
-  //   left: 107px;
-  //   top: 0;
-  //   width: 92%;
-  // }
-  // &::after {
-  //   background: url("../img/slider-sketch_bg.png") center no-repeat;
-  //   content: "";
-  //   height: 318px;
-  //   position: absolute;
-  //   right: 0;
-  //   top: 50px;
-  //   width: 535px;
-  // }
+    &__title {
+      margin-bottom: 8px;
+      text-align: center;
+      @media screen and (max-width: 767px) {
+        margin-bottom: 24px;
+      }
+    }
 }
 
 .feedback {

@@ -28,12 +28,9 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 41%;
+    padding-bottom: 32px;
     padding-top: 32px;
     position: relative;
-    @media screen and (max-width: 1365px) {
-      padding-bottom: 30%;
-    }
     @media screen and (max-width: 767px) {
       flex-wrap: wrap;
       margin-top: 20px;
@@ -41,15 +38,18 @@
     }
   }
   &__logo {
-    flex-shrink: 0;
-    height: 48px;
-    width: 137px;
-    @media screen and (max-width: 767px) {
-      flex-basis: 50%;
-      height: 42px;
-      order: 0;
-      width: 120px;
+    img {
+      flex-shrink: 0;
+      height: 48px;
+      width: 137px;
+      @media screen and (max-width: 767px) {
+        flex-basis: 50%;
+        height: 42px;
+        order: 0;
+        width: 120px;
+      }
     }
+    
   }
   &__phone {
     color: $base-text-color;
@@ -92,6 +92,10 @@
 }
 
 .promo {
+  padding-top: 31%;
+  @media screen and (max-width: 1365px) {
+    padding-top: 18%;
+  }
   @media screen and (max-width: 767px) {
     padding-top: 265px;
   }

@@ -1,4 +1,4 @@
-.s-life {
+.life {
   background: url("../img/life_bg.png") center no-repeat;
   background-size: 100% 100%;
   margin-bottom: 110px;
@@ -18,19 +18,6 @@
   @media screen and (max-width: 767px) {
     background-image: none;
   }
-  // &::before {
-  //   background: url("../img/life_bg.png") center no-repeat;
-  //   background-size: 100% 100%;
-  //   content: "";
-  //   height: 950px;
-  //   position: absolute;
-  //   left: 0;
-  //   top: -40px;
-  //   width: 100%;
-  // }
-}
-
-.life {
   &__title {
     margin-bottom: 24px;
     text-align: center;
@@ -86,7 +73,6 @@
   &__image {
     position: relative;
     @media screen and (max-width: 1365px) {
-      // width: 288px;
       height: 700px;
       overflow: hidden;
     }
@@ -197,11 +183,3 @@
     }
   }
 }
-
-// @media screen and (max-width: 1365px) {
-//   .life__photo {
-//     width: 288px;
-//     height: 400px;
-//     margin: 0 auto;
-//   }
-// }

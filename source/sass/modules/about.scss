@@ -1,17 +1,7 @@
-.s-about {
+.about {
   background: url("../img/about_bg.png") center center no-repeat;
   background-size: 100% 100%;
   padding-bottom: 152px;
-  // &::before {
-  //   background: url("../img/about_bg.png") center no-repeat;
-  //   background-size: 100% 100%;
-  //   content: "";
-  //   height: 604px;
-  //   position: absolute;
-  //   left: 0;
-  //   top: 160px;
-  //   width: 100%;
-  // }
   @media screen and (max-width: 767px) {
     background-size: 100% 60%;
     background-position-y: bottom;
@@ -20,12 +10,11 @@
     .container {
       padding: 0;
     }
-  }  
-}
-
-.about {
-  @media screen and (max-width: 767px) {
-    padding-bottom: 0;
+  }
+  &__content {
+    @media screen and (max-width: 767px) {
+      padding-bottom: 0;
+    }
   }
   &__title {
     margin-bottom: 24px;

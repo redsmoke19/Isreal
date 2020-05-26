@@ -231,7 +231,7 @@
   }
 
   function getPhotoMobileSlider() {
-    var imageContainer = document.querySelector('.life');
+    var imageContainer = document.querySelector('.life__content');
     var desktopImages = document.querySelector('.life__images');
     var mobileImages = document.querySelectorAll('.js-life-mobile__image');
     var mobileImageContainer = document.createElement('div');
@@ -312,6 +312,5 @@
   getInputMask();
   getAccordionQuestions();
   getFeedbackSlider();
-  // getPopup();
 
 })();

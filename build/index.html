@@ -2,22 +2,22 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Главная страница</title><!--[if IE]>
-    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <title>Главная страница</title>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
-    <link rel="stylesheet" type="text/css" href="css/styles.min.css"><!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   </head>
   <body>
     <div class="overlay"></div>
     <div class="wrapper">
       <header class="header">
         <div class="container">
-          <div class="header__nav"><a class="header__phone" href="tel:+792726216581">+ (972) 2 – 621 – 6581</a>
-            <picture>
-              <source type="image/webp" srcset="img/content/logo1x.webp, img/content/logo2x.webp 2x"><img class="header__logo" src="img/content/logo1x.png" srcset="img/content/logo2x.png 2x" alt="Логотип фирмы Маса">
-            </picture>
+          <div class="header__nav"><a class="header__phone" href="tel:+792726216581">+ (972) 2 – 621 – 6581</a><a class="header__logo">
+              <picture>
+                <source type="image/webp" srcset="img/content/logo1x.webp, img/content/logo2x.webp 2x"><img src="img/content/logo1x.png" srcset="img/content/logo2x.png 2x" alt="Логотип фирмы Маса">
+              </picture></a>
             <button class="header__callback">заказать звонок</button>
           </div>
         </div>
@@ -40,9 +40,9 @@
       </section>
     </div>
     <main class="content">
-      <section class="s-about">
+      <section class="about">
         <div class="container">
-          <div class="about">
+          <div class="about__content">
             <h2 class="about__title section__title">О программе</h2>
             <p class="about__description">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле.В течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
             <div class="about__video">
@@ -60,9 +60,9 @@
           </div>
         </div>
       </section>
-      <section class="s-programs">
+      <section class="programs">
         <div class="container">
-          <div class="programs">
+          <div class="programs__content">
             <h2 class="programs__title section__title">Програмы</h2>
             <div class="pragrams__tabs tabs">
               <ul class="tabs__list">
@@ -103,9 +103,9 @@
           </div>
         </div>
       </section>
-      <section class="s-to-go">
+      <section class="to-go">
         <div class="container">
-          <div class="to-go">
+          <div class="to-go__content">
             <h2 class="to-go__title section__title">Хочу поехать</h2>
             <p class="to-go__text">Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
             <form class="to-go__form">
@@ -117,29 +117,20 @@
           </div>
         </div>
       </section>
-      <section class="s-to-road">
-        <!--picture-->
-        <!--    source(type="image/webp" srcset="img/content/how-to-road_1x.webp, img/content/how-to-road_2x.webp 2x")-->
-        <!--    img.s-to-road__image(src="img/content/how-to-road_1x.png" srcset="img/content/how-to-road_2x.png 2x" alt="Картинка друзей" width="581" height="707")-->
+      <section class="to-road">
         <div class="container">
           <div class="to-road__wrapper">
             <picture>
               <source type="image/webp" srcset="img/content/how-to-road_1x.webp, img/content/how-to-road_2x.webp 2x"><img class="to-road__image" src="img/content/how-to-road_1x.png" srcset="img/content/how-to-road_2x.png 2x" alt="Картинка друзей" width="581" height="707">
             </picture>
-            <div class="to-road">
+            <div class="to-road__content">
               <h2 class="to-road__title section__title">Как поехать</h2>
               <p class="to-road__description">Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p>
               <p class="to-road__promo">Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:</p>
               <ul class="to-road__list">
-                <li class="to-road__item"><span class="to-road__number">1</span><span class="to-road__text">Быть в возрасте от 16 до 30 лет</span>
-                  <!--.to-road__line-->
-                </li>
-                <li class="to-road__item"><span class="to-road__number">2</span><span class="to-road__text">Иметь оконченное среднее образование</span>
-                  <!--.to-road__line-->
-                </li>
-                <li class="to-road__item"><span class="to-road__number">3</span><span class="to-road__text">Иметь документально подтверждённые еврейские корни и пройти консульскую проверку</span>
-                  <!--.to-road__line-->
-                </li>
+                <li class="to-road__item"><span class="to-road__number">1</span><span class="to-road__text">Быть в возрасте от 16 до 30 лет</span></li>
+                <li class="to-road__item"><span class="to-road__number">2</span><span class="to-road__text">Иметь оконченное среднее образование</span></li>
+                <li class="to-road__item"><span class="to-road__number">3</span><span class="to-road__text">Иметь документально подтверждённые еврейские корни и пройти консульскую проверку</span></li>
                 <li class="to-road__item"><span class="to-road__number">4</span><span class="to-road__text">За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</span></li>
               </ul>
               <p class="to-road__note">Если вы не подходите по этим правилам, вы всё равно можете принять участие в программе «Маса», оплатив её полную стоимость.</p>
@@ -147,9 +138,9 @@
           </div>
         </div>
       </section>
-      <section class="s-life">
+      <section class="life">
         <div class="container">
-          <div class="life">
+          <div class="life__content">
             <h2 class="section__title life__title">Жизнь в Израиле</h2>
             <p class="life__description">Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и познакомиться с богатой культурно-исторической жизнью Израиля и его жителей.</p>
             <div class="life__images">
@@ -190,13 +181,13 @@
           </div>
         </div>
       </section>
-      <section class="s-view-photo">
+      <section class="view-photo">
         <picture>
           <source type="image/webp" media="(max-width: 767px)" srcset="img/content/masaisrael_bg_x1-mobile.webp, img/content/masaisrael_bg_x2-mobile.webp 2x">
           <source type="image/webp" srcset="img/content/masaisrael_bg_x1.webp, img/content/masaisrael_bg_x2.webp 2x">
-          <source media="(min-width: 768px)" srcset="img/content/masaisrael_bg_x1-mobile.png 1x, img/content/masaisrael_bg_x2-mobile.png 2x"><img class="s-view-photo__image" src="img/content/masaisrael_bg_x1.png" srcset="img/content/masaisrael_bg_x2.png 2x" alt="Фотография из блога участника программы" width="1361" height="583">
+          <source media="(min-width: 768px)" srcset="img/content/masaisrael_bg_x1-mobile.png 1x, img/content/masaisrael_bg_x2-mobile.png 2x"><img class="view-photo__image" src="img/content/masaisrael_bg_x1.png" srcset="img/content/masaisrael_bg_x2.png 2x" alt="Фотография из блога участника программы" width="1361" height="583">
         </picture>
-        <div class="view-photo">
+        <div class="view-photo__content">
           <h2 class="section__title view-photo__title">#masaizrael</h2>
           <p class="view-photo__description">Познакомьтесь с программой от первого лица! Многие участники ведут блоги и фотодневники о жизни, учёбе и путешествиях в Израиле.</p>
           <button class="section__button view-photo__button">
@@ -206,9 +197,9 @@
           </button>
         </div>
       </section>
-      <section class="s-questions">
+      <section class="questions">
         <div class="container">
-          <div class="questions">
+          <div class="questions__content">
             <div class="questions__inner">
               <h2 class="questions__title section__title">Частные вопросы</h2>
               <ul class="questions__list question">
@@ -276,9 +267,9 @@
           </div>
         </div>
       </section>
-      <section class="s-feedback">
+      <section class="feedback">
         <div class="container">
-          <div class="feedback">
+          <div class="feedback__content">
             <h2 class="section__title feedback__title">Отзывы</h2>
             <div class="slider__nav">
               <div class="slider__page-count">3 / 6</div>
@@ -490,9 +481,9 @@
           </div>
         </div>
       </section>
-      <section class="s-details">
+      <section class="details">
         <div class="container">
-          <div class="details">
+          <div class="details__content">
             <div class="details__top">
               <div class="details__info">
                 <h2 class="section__title details__title">Узнать подробности</h2>
