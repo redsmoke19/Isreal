@@ -1,15 +1,15 @@
 .to-go {
-  padding-top: 205px;
+  padding-top: 200px;
   padding-bottom: 130px;
   &::after {
     background: url("../img/to-go_backpack.png") center no-repeat;
     background-size: contain;
     content: "";
-    height: 226px;
+    height: 265px;
     position: absolute;
-    left: -37px;
-    top: -40px;
-    width: 167px;
+    left: -68px;
+    top: 144px;
+    width: 239px;
     @media screen and (max-width: 1023px) {
       top: 100px;
     }
@@ -67,7 +67,7 @@
     font-size: 17px;
     line-height: 29px;
     max-width: 400px;
-    margin-bottom: 64px;
+    margin-bottom: 61px;
     opacity: 0.87;
     @media screen and (max-width: 767px) {
       font-size: 16px;
@@ -85,6 +85,7 @@
   }
   &__phone {
     padding: 20px 250px 20px 40px;
+    outline: none;
     width: 477px;
     @media screen and (max-width: 767px) {
       margin-bottom: 8px;
@@ -93,7 +94,8 @@
     }
   }
   &__submit {
-    margin-left: -229px;
+    margin-left: -218px;
+    padding: 20px 35px;
     @media screen and (max-width: 767px) {
       margin: 0;
       padding: 20px 40px;

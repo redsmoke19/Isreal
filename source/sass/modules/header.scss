@@ -1,10 +1,10 @@
 .wrapper {
   background-image: url("../img/girl1x.png"), url("../img/izrail_title1x.png"), url("../img/hero_bg1x.png");
-  background-position: top, center 80px, top;
+  background-position: top, center 160px, top;
   background-size: 100%, 75%, 100%;
   background-repeat: no-repeat, no-repeat, no-repeat;
   height: 100vh;
-  margin-bottom: 27px;
+  margin-bottom: 11px;
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../img/girl2x.png"), url("../img/izrail_title2x.png"), url("../img/hero_bg2x.png");
   }
@@ -75,6 +75,7 @@
     font-family: $medium-font;
     line-height: 18px;
     padding: 0;
+    outline: none;
     text-transform: uppercase;
     &:hover {
       opacity: 0.8;
@@ -91,7 +92,7 @@
 }
 
 .promo {
-  padding-top: 25%;
+  padding-top: 31%;
   @media screen and (max-width: 1023px) {
     padding-top: 18%;
   }

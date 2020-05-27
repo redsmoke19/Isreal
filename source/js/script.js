@@ -29,7 +29,7 @@
   }
 
   function getInputMask() {
-    $('.js-phone__input').focus(function (e) {
+    $('.js-phone').focus(function (e) {
       var $self = $(this);
       if ($self.val() === '') {
         $self.val('+7 ');
@@ -38,7 +38,7 @@
       $self.attr('placeholder', '');
     });
 
-    $('.js-phone__input').blur(function (e) {
+    $('.js-phone').blur(function (e) {
       var $self = $(this);
       if ($self.val() === '+7' || $self.val() === '+7 ') {
         $self.val('');
@@ -47,13 +47,13 @@
       if ($self.val().length === 18) {
         $self.css('border-color', '#484848');
       } else if ($self.val().length < 4) {
-        $self.css('border-color', '#e3e3e3');
+        $self.css('border-color', '#none');
       } else {
         $self.css('border-color', '#ff0000');
       }
     });
 
-    $('.js-phone__input').mask('+7 (000) 000 00 00');
+    $('.js-phone').mask('+7 (000) 000 00 00');
 
     $('.details__input--name').blur(function (e) {
       var $self = $(this);

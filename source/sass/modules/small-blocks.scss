@@ -1,49 +1,47 @@
-.section {
-  &__title {
-    color: $blue-color;
-    font-family: $title-font;
-    font-size: 40px;
-    line-height: 49px;
-    text-transform: uppercase;
-    @media screen and (max-width: 767px) {
-      font-size: 32px;
-      line-height: 39px;
-    }
+.title {
+  color: $blue-color;
+  font-family: $title-font;
+  font-size: 40px;
+  line-height: 49px;
+  text-transform: uppercase;
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+    line-height: 39px;
   }
-  &__button {
-    background: $gradient-color;
-    border-radius: 80px;
-    border: none;
-    color: $white;
-    cursor: pointer;
-    font-family: $medium-font;
-    font-size: 17px;
-    line-height: 20px;
-    padding: 20px 40px;
-    text-transform: uppercase;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
-    transition: all linear 0.5s;
-    &:hover {
-      background: linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%);
-    }
-    &:active {
-      background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%);
-    }
+}
+.button {
+  background: $gradient-color;
+  border-radius: 80px;
+  border: none;
+  color: $white;
+  cursor: pointer;
+  font-family: $medium-font;
+  font-size: 17px;
+  line-height: 20px;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  transition: all linear 0.5s;
+  &:hover {
+    background: linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%);
   }
-  &__input {
-    border: 2px solid $border-color;
-    border-radius: 80px;
-    color: $base-text-color;
-    font-family: $medium-font;
-    font-size: 17px;
-    line-height: 20px;
-    text-transform: uppercase;
-    &::placeholder {
-      opacity: 0.5;
-    }
-    &:focus {
-      border-color: #ffc341;
-    }
+  &:active {
+    background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%);
+  }
+}
+.input {
+  border: 2px solid $border-color;
+  border-radius: 80px;
+  color: $base-text-color;
+  font-family: $medium-font;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  &::placeholder {
+    opacity: 0.5;
+  }
+  &:focus {
+    border-color: #ffc341;
   }
 }
 
