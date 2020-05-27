@@ -6,7 +6,7 @@
     background: url("../img/programs_bg-mobile.png") no-repeat;
     background-position: 100% 35%;
     background-size: 320px 201px;
-    padding-top: 48px;
+    padding-top: 0;
   }
   &__content {
     margin-bottom: 35px;
@@ -15,13 +15,14 @@
       padding: 0;
     }
     @media screen and (max-width: 767px) {
-      margin-bottom: 80px;
+      margin-bottom: 61px;
     }
   }
   &__title {
     margin-bottom: 73px;
     @media screen and (max-width: 767px) {
       margin-bottom: 16px;
+      text-align: center;
     }
   }
 }
@@ -234,7 +235,6 @@
     }
     @media screen and (max-width: 767px) {
       padding: 0;
-      padding-top: 20px;
     }
     &--active {
       display: block;

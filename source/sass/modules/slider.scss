@@ -48,7 +48,7 @@
     align-items: center;
     display: flex;
     line-height: 21px;
-    margin-bottom: 32px;
+    margin-bottom: 14px;
     @media screen and (max-width: 1023px) {
       align-items: flex-start;
       flex-direction: column;
@@ -106,7 +106,7 @@
       justify-content: flex-start;
     }
   }
-  &__nav {
+  &-nav {
     align-items: center;
     display: flex;
     position: absolute;
@@ -122,39 +122,40 @@
     @media screen and (max-width: 767px) {
       top: 400px;
     }
-  }
-  &__page-count {
-    font-size: 17px;
-    line-height: 25px;
-    margin-right: 24px;
-    opacity: 0.5;
-  }
-  &__button {
-    align-items: center;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    padding: 0;
-    &:not(:last-child) {
-      margin-right: 20px;
+    &__page-count {
+      font-size: 17px;
+      line-height: 25px;
+      margin-right: 24px;
+      opacity: 0.5;
     }
-    &:hover {
-      svg {
-        opacity: 0.7;
+    &__button {
+      align-items: center;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      padding: 0;
+      outline: none;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+      &:hover {
+        svg {
+          opacity: 0.7;
+        }
       }
     }
-  }
-  &__icon {
-    fill: transparent;
-    stroke: $base-text-color;
-    opacity: 0.2;
-    transition: all linear 0.15s;
-    &--left {
-      transform: rotate(90deg);
-    }
-    &--right {
-      transform: rotate(-90deg);
+    &__icon {
+      fill: transparent;
+      stroke: $base-text-color;
+      opacity: 0.2;
+      transition: all linear 0.15s;
+      &--left {
+        transform: rotate(90deg);
+      }
+      &--right {
+        transform: rotate(-90deg);
+      }
     }
   }
   &__social {

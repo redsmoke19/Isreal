@@ -13,7 +13,7 @@
   //}
   @media screen and (max-width: 1023px) {
     background-image: url("../img/girl_x1-mobile.png"), url("../img/izrail_title_x1-mobile.png"), url("../img/promo_bg_x1-mobile.png");
-    background-position: top, center 140px, top;
+    background-position: top, center 168px, top;
     background-size: 100%, 100%, 100%;
     height: 100vh;
     margin-bottom: 0;
@@ -24,6 +24,9 @@
 }
 
 .header {
+  @media screen and (max-width: 767px) {
+    //padding-top: 20px;
+  }
   &__nav {
     align-items: center;
     display: flex;
@@ -33,8 +36,8 @@
     position: relative;
     @media screen and (max-width: 767px) {
       flex-wrap: wrap;
-      margin-top: 20px;
       padding: 0;
+      padding-top: 20px;
     }
   }
   &__logo {
@@ -97,7 +100,7 @@
     padding-top: 18%;
   }
   @media screen and (max-width: 767px) {
-    padding-top: 265px;
+    padding-top: 271px;
   }
   &__text {
     color: $white;

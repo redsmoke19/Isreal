@@ -98,10 +98,10 @@
       prevNextButtons: false,
       draggable: true,
     });
-    var counter = document.querySelector('.slider__page-count');
+    var counter = document.querySelector('.slider-nav__page-count');
 
-    var prevButton = document.querySelector('.slider__button--left');
-    var nextButton = document.querySelector('.slider__button--right');
+    var prevButton = document.querySelector('.slider-nav__button--left');
+    var nextButton = document.querySelector('.slider-nav__button--right');
 
     function arrowClickPrevHandler() {
       reviewsSlider.previous();
@@ -233,7 +233,7 @@
   function getPhotoMobileSlider() {
     var imageContainer = document.querySelector('.life__content');
     var desktopImages = document.querySelector('.life__images');
-    var mobileImages = document.querySelectorAll('.js-life-mobile__image');
+    var mobileImages = document.querySelectorAll('.js-life-mobile');
     var mobileImageContainer = document.createElement('div');
     desktopImages.style.display = 'none';
     mobileImageContainer.classList.add('life__mobile');
