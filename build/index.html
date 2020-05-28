@@ -107,11 +107,11 @@
           <div class="to-go__content">
             <h2 class="to-go__title title">Хочу поехать!</h2>
             <p class="to-go__text">Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
-            <form class="to-go__form">
+            <form class="to-go__form novalidate">
               <label>
-                <input class="to-go__phone input js-phone" aria-label="Введите свой номер телефона" type="tel" placeholder="Телефон">
+                <input class="to-go__phone input js-phone" id="to-go-input" data-mask="+7 (000) 000 00 00" aria-label="Введите свой номер телефона" type="tel" placeholder="Телефон" minlength="18" maxlength="18" required="">
               </label>
-              <button class="to-go__submit button" type="submit">Перезвоните мне</button>
+              <input class="to-go__submit button" type="submit" value="Перезвоните мне">
             </form>
           </div>
         </div>
@@ -283,7 +283,7 @@
                   </div>
                   <div class="slider__review">
                     <p class="slider__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
-                    <p class="slider__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p><span class="slider__reed-more">Читать подробнее</span>
+                    <p class="slider__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p><a class="slider__reed-more" href="#">Читать подробнее</a>
                   </div>
                   <div class="slider__footer">
                     <ul class="slider__social social">
@@ -315,7 +315,7 @@
                   </div>
                   <div class="slider__review">
                     <p class="slider__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
-                    <p class="slider__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p><span class="slider__reed-more">Читать подробнее</span>
+                    <p class="slider__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p><a class="slider__reed-more" href="#">Читать подробнее</a>
                   </div>
                   <div class="slider__footer">
                     <ul class="slider__social social">
@@ -347,7 +347,7 @@
                   </div>
                   <div class="slider__review">
                     <p class="slider__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
-                    <p class="slider__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p><span class="slider__reed-more">Читать подробнее</span>
+                    <p class="slider__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p><a class="slider__reed-more" href="#">Читать подробнее</a>
                   </div>
                   <div class="slider__footer">
                     <ul class="slider__social social">
@@ -379,7 +379,7 @@
                   </div>
                   <div class="slider__review">
                     <p class="slider__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
-                    <p class="slider__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p><span class="slider__reed-more">Читать подробнее</span>
+                    <p class="slider__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p><a class="slider__reed-more" href="#">Читать подробнее</a>
                   </div>
                   <div class="slider__footer">
                     <ul class="slider__social social">
@@ -411,7 +411,7 @@
                   </div>
                   <div class="slider__review">
                     <p class="slider__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
-                    <p class="slider__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p><span class="slider__reed-more">Читать подробнее</span>
+                    <p class="slider__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p><a class="slider__reed-more" href="#">Читать подробнее</a>
                   </div>
                   <div class="slider__footer">
                     <ul class="slider__social social">
@@ -443,7 +443,7 @@
                   </div>
                   <div class="slider__review">
                     <p class="slider__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
-                    <p class="slider__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p><span class="slider__reed-more">Читать подробнее</span>
+                    <p class="slider__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p><a class="slider__reed-more" href="#">Читать подробнее</a>
                   </div>
                   <div class="slider__footer">
                     <ul class="slider__social social">
@@ -486,7 +486,7 @@
             <div class="details__top">
               <div class="details__info">
                 <h2 class="details__title title">Узнать подробности</h2>
-                <div class="details__your-city"><span class="details__your-city--title">Ваш город:</span><a class="details__your-city--name" href="#">Новосибирск
+                <div class="details__your-city"><span class="details__town">Ваш город:</span><a class="details__city" href="#">Новосибирск
                     <svg class="svg-sprite-icon icon-icon-nav details__icon details__icon--nav" width="20" height="19">
                       <use xlink:href="img/sprite_auto.svg#icon-nav"></use>
                     </svg></a>
@@ -501,7 +501,7 @@
                     </picture>
                   </div>
                   <div class="card__info">
-                    <div class="card__curator"><span class="card__curator--title">Ваш куратор:</span><span class="card__curator--name">Анна Горелик</span></div>
+                    <div class="card__curator"><span class="card__curator-title">Ваш куратор:</span><span class="card__curator-name">Анна Горелик</span></div>
                     <p class="card__address">Новосибирск, ул. Щетинкина 68,<br> культурный центр «Бейт Менахем»</p>
                     <ul class="card__social social">
                       <li class="social__item card__link"><a class="social__link" href="https://www.facebook.com/htmlacademy/" aria-label="Ссылка на facebook">
@@ -533,10 +533,10 @@
               </div>
               <form class="details__form">
                 <label>
-                  <input class="details__input details__input--name input" aria-label="Введите своё имя" type="text" placeholder="Имя" minlength="3" maxlength="20">
+                  <input class="details__input details__input--name input" aria-label="Введите своё имя" type="text" placeholder="Имя" minlength="3" maxlength="20" requared="">
                 </label>
                 <label>
-                  <input class="details__input details__input--phone input js-phone__input" aria-label="Введите свой номер телефона" type="tel" placeholder="Телефон">
+                  <input class="details__input details__input--phone input js-phone" aria-label="Введите свой номер телефона" type="tel" placeholder="Телефон">
                 </label>
                 <button class="details__button button" type="submit">Позвоните мне</button>
               </form>
@@ -578,29 +578,29 @@
             <input class="modal-callback__input" type="text" aria-label="Введите Ваше имя" minlength="3" maxlength="20" placeholder="Имя">
           </label>
           <label class="modal-callback__label">
-            <input class="modal-callback__input js-phone__input" type="tel" aria-label="Введите Ваш номер телефона" placeholder="Телефон">
+            <input class="modal-callback__input js-phone" type="tel" aria-label="Введите Ваш номер телефона" placeholder="Телефон">
           </label>
-          <button class="section__button js-recall-button" type="button">Перезвоните мне</button>
+          <button class="button js-recall-button" type="button">Перезвоните мне</button>
           <div class="modal-callback__footer">
             <input class="modal-callback__checkbox visually-hidden" type="checkbox" id="accept" name="accept" value="verification">
             <label class="modal-callback__text" for="accept">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
           </div>
         </form>
         <div class="modal__close" tabindex="0">
-          <svg class="svg-sprite-icon icon-icon-close modal__icon--close" width="18" height="18">
+          <svg class="svg-sprite-icon icon-icon-close modal__icon modal__icon--close" width="18" height="18">
             <use xlink:href="img/sprite_auto.svg#icon-close"></use>
           </svg>
         </div>
       </div>
       <div class="modal-accepted">
-        <svg class="svg-sprite-icon icon-icon-accept modal__icon--accept" width="66" height="64">
+        <svg class="svg-sprite-icon icon-icon-accept modal__icon modal__icon--accept" width="66" height="64">
           <use xlink:href="img/sprite_auto.svg#icon-accept"></use>
         </svg>
         <h2>Заявка принята</h2>
         <p>Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
-        <button class="section__button" type="submit">Понятно</button>
+        <button class="button" type="submit">Понятно</button>
         <div class="modal__close" tabindex="0">
-          <svg class="svg-sprite-icon icon-icon-close modal__icon--close" width="18" height="18">
+          <svg class="svg-sprite-icon icon-icon-close modal__icon modal__icon--close" width="18" height="18">
             <use xlink:href="img/sprite_auto.svg#icon-close"></use>
           </svg>
         </div>

@@ -17,6 +17,7 @@
   }
   @media screen and (max-width: 767px) {
     background-image: none;
+    margin-bottom: 25px;
   }
   &__title {
     margin-bottom: 24px;
@@ -37,9 +38,17 @@
     display: flex;
     flex-direction: row;
   }
+  picture {
+    &:focus {
+      outline: none;
+    }
+  }
   &__photo {
     width: 100%;
     height: auto;
+    &:focus {
+      outline: none;
+    }
     @media screen and (max-width: 1023px) {
       width: 507px;
       height: 700px;
@@ -72,6 +81,9 @@
   }
   &__image {
     position: relative;
+    &:focus {
+      outline: none;
+    }
     @media screen and (max-width: 1023px) {
       height: 700px;
       overflow: hidden;
@@ -104,7 +116,7 @@
   &__dots {
     @media screen and (max-width: 1023px) {
       position: absolute;
-      bottom: -30px;
+      bottom: -20px;
       list-style: none;
       display: block;
       text-align: center;
@@ -114,22 +126,21 @@
       li {
         position: relative;
         display: inline-block;
-        height: 20px;
-        width: 20px;
-        margin: 0 5px;
+        height: 15px;
+        width: 15px;
         padding: 0;
         cursor: pointer;
         button {
           border: 0;
           background: 0 0;
           display: block;
-          height: 20px;
-          width: 20px;
+          height: 15px;
+          width: 15px;
           outline: 0;
           line-height: 0;
           font-size: 0;
           color: transparent;
-          padding: 5px;
+          padding: 0;
           cursor: pointer;
           &::before {
             border-radius: 50%;

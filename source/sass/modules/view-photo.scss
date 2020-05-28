@@ -40,7 +40,8 @@
       text-align: right;
     }
     @media screen and (max-width: 767px) {
-      margin-bottom: 96px;
+      font-size: 39px;
+      margin-bottom: 64px;
       text-align: center;
     }
   }
@@ -76,8 +77,8 @@
     }
     @media screen and (max-width: 767px) {
       flex-shrink: 0;
-      margin-left: 0;
-      width: 100%;
+      margin: 0 auto;
+      width: 89%;
     }
   }
   &__icon {

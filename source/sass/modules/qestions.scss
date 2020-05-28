@@ -8,6 +8,9 @@
     margin-bottom: 80px;
     padding-top: 0;
   }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 66px;
+  }
   .container {
     padding-right: 0;
     @media screen and (max-width: 1023px) {
@@ -27,6 +30,9 @@
     width: 153px;
     @media screen and (max-width: 1023px) {
       top: 600px;
+    }
+    @media screen and (max-width: 767px) {
+      top: 662px;
     }
   }
   &__content {
@@ -66,6 +72,12 @@
     padding-bottom: 24px;
     &:not(:first-child) {
       padding-top: 24px;
+      @media screen and (max-width: 767px) {
+        padding-top: 13px;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      padding-bottom: 27px;
     }
   }
   &__title {

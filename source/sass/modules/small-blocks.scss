@@ -25,8 +25,12 @@
   &:hover {
     background: linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%);
   }
+  &:focus {
+    outline: none;
+  }
   &:active {
     background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%);
+    outline: none;
   }
 }
 .input {
@@ -36,13 +40,33 @@
   font-family: $medium-font;
   font-size: 17px;
   line-height: 20px;
+  outline: none;
+  position: relative;
   text-transform: uppercase;
   &::placeholder {
     opacity: 0.5;
   }
+  &:hover {
+    border-color: #ffc341;
+  }
   &:focus {
     border-color: #ffc341;
   }
+  &__error {
+    border-color: #ff0000;
+  }
+}
+
+label {
+  position: relative;
+}
+
+.error-message {
+  bottom: -20px;
+  color: rgba(#ff0000, 0.5);
+  font-size: 13px;
+  left: 35px;
+  position: absolute;
 }
 
 .social {
@@ -77,6 +101,7 @@
   }
   @media screen and (max-width: 767px) {
     align-items: flex-start;
+    margin-bottom: 39px;
   }
   &__picture {
     margin-right: 20px;
@@ -110,11 +135,11 @@
       font-size: 15px;
       line-height: 22px;
     }
-    &--title {
+    &-title {
       color: $blue-color;
       margin-right: 8px;
     }
-    &--name {
+    &-name {
       opacity: 0.74;
     }
   }

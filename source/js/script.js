@@ -29,49 +29,24 @@
   }
 
   function getInputMask() {
-    $('.js-phone').focus(function (e) {
-      var $self = $(this);
-      if ($self.val() === '') {
-        $self.val('+7 ');
-      }
-      $self.data('placeholder-tmp', $self.attr('placeholder'));
-      $self.attr('placeholder', '');
-    });
+    // $('.js-phone').focus(function (e) {
+    //   var $self = $(this);
+    //   if ($self.val() === '') {
+    //     $self.val('+7 ');
+    //   }
+    //   $self.data('placeholder-tmp', $self.attr('placeholder'));
+    //   $self.attr('placeholder', '');
+    // });
 
-    $('.js-phone').blur(function (e) {
-      var $self = $(this);
-      if ($self.val() === '+7' || $self.val() === '+7 ') {
-        $self.val('');
-      }
-      $self.attr('placeholder', $self.data('placeholder-tmp'));
-      if ($self.val().length === 18) {
-        $self.css('border-color', '#484848');
-      } else if ($self.val().length < 4) {
-        $self.css('border-color', '#none');
-      } else {
-        $self.css('border-color', '#ff0000');
-      }
-    });
+    // $('.js-phone').blur(function (e) {
+    //   var $self = $(this);
+    //   if ($self.val() === '+7' || $self.val() === '+7 ') {
+    //     $self.val('');
+    //   }
+    //   $self.attr('placeholder', $self.data('placeholder-tmp'));
+    // });
 
-    $('.js-phone').mask('+7 (000) 000 00 00');
-
-    $('.details__input--name').blur(function (e) {
-      var $self = $(this);
-      $self.attr('placeholder', $self.data('placeholder-tmp'));
-      if ($self.val().length > 2 || $self.val().length < 21) {
-        $self.css('border-color', '#484848');
-      }
-      if ($self.val().length < 3 || $self.val().length > 20) {
-        $self.css('border-color', '#ff0000');
-      }
-      if ($self.val().length == 0) {
-        $self.css('border-color', '#e3e3e3');
-      }
-    });
-
-    $('.to-go__submit').click(function (evt) {
-      evt.preventDefault();
-    });
+    $('.js-phone').mask('+7 ');
   }
 
   function getAccordionQuestions() {
@@ -308,9 +283,142 @@
 
   }());
 
+  function getFormValiditi() {
+    var form = document.querySelector('.to-go__form');
+    var forms = document.querySelectorAll('.novalidate');
+    for (var i = 0; i < forms.length; i++) {
+      forms[i].setAttribute('novalidate', true);
+    }
+
+    function hasError(field) {
+      // if (field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button') {
+      //   return;
+      // }
+      var validity = field.validity;
+      if (validity.valid) {
+        return;
+      }
+      if (validity.valueMissing) {
+        return 'Пожалуйста, заполните это поле. Оно обязательное';
+      }
+      if (validity.typeMismatch) {
+        if (field.type === 'email') {
+          return 'Пожалуйста, введите верное значение почты';
+        }
+        if (field.type === 'url') {
+          return 'Пожалуйста, введите правильный адрес ссылки';
+        }
+      }
+      if (validity.tooShort) {
+        if (field.type === 'tel') {
+          return 'Неверный номер телефона';
+        }
+        return 'Длинна имени должна быть не менее ' + field.getAttribute('minLength') + ' символов. Вы ввели ' + field.value.length + ' символа.';
+      }
+      if (validity.tooLong) {
+        return 'Длинна имени должна быть не более ' + field.getAttribute('maxLength') + ' символов. Вы ввели ' + field.value.length + ' символа.';
+      }
+      if (validity.badInput) {
+        return 'Пожалуйста, введите число';
+      }
+      if (validity.stepMismatch) {
+        return 'Указано не верное значение';
+      }
+      if (validity.rangeOverflow) {
+        return 'Введенное значение слишком велико';
+      }
+      if (validity.rangeUnderflow) {
+        return 'Введенное значение слишком мало';
+      }
+      if (validity.patternMismatch) {
+        return 'неверный формат';
+      }
+      return 'Введенное значение не верно';
+    }
+
+    function showError(field, error) {
+      field.classList.add('input__error');
+      var id = field.id;
+      if (!id) {
+        return;
+      }
+      var message = field.form.querySelector('.error-message#error-for-' + id);
+      if (!message) {
+        message = document.createElement('div');
+        message.className = 'error-message';
+        message.id = 'error-for-' + id;
+        field.parentNode.insertBefore(message, field.nextSibling);
+      }
+      field.setAttribute('aria-describedby', 'error-for-' + id);
+      message.innerHTML = error;
+      message.style.display = 'block';
+      message.style.visibility = 'visible';
+    }
+
+    function removeError(field) {
+      field.classList.remove('input__error');
+      field.removeAttribute('aria-describedby');
+      var id = field.id;
+      if (!id) {
+        return;
+      }
+      var message = field.form.querySelector('.error-message#error-for-' + id + '');
+      if (!message) {
+        return;
+      }
+      message.innerHTML = '';
+      message.style.display = 'none';
+      message.style.visibility = 'hidden';
+    }
+
+    function fieldBlurHandler(evt) {
+      if (!evt.target.form.classList.contains('novalidate')) {
+        return;
+      }
+      var error = hasError(evt.target);
+      if (error) {
+        showError(evt.target, error);
+        return;
+      }
+      removeError(evt.target);
+    }
+
+    function submitButtonHandler(evt) {
+      if (!evt.target.classList.contains('novalidate')) {
+        return;
+      }
+      var fields = evt.target.elements;
+      var error;
+      var hasErrors;
+      for (var j = 0; j < fields.length; j++) {
+        error = hasError(fields[j]);
+        if (error) {
+          showError(fields[j], error);
+          if (!hasErrors) {
+            hasErrors = fields[j];
+          }
+        } else {
+          evt.preventDefault();
+          removeError(fields[j]);
+        }
+      }
+      if (hasErrors) {
+        evt.preventDefault();
+        hasErrors.focus();
+      } else if (!hasErrors) {
+        console.log('Yeeep');
+      }
+
+    }
+    
+    form.addEventListener('submit', submitButtonHandler, false);
+    form.addEventListener('blur', fieldBlurHandler, true);
+  }
+
   switchTabs();
-  getInputMask();
+  // getInputMask();
   getAccordionQuestions();
   getFeedbackSlider();
+  getFormValiditi();
 
 })();

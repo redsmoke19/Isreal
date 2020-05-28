@@ -45,19 +45,19 @@
       font-size: 15px;
       line-height: 22px;
     }
-    &--name {
-      border-bottom: 1px dashed $blue-color;
-      color: rgba($base-text-color, 0.87);
-      cursor: pointer;
-      font-family: $medium-font;
-      margin-left: 16px;
-      position: relative;
-      text-transform: uppercase;
-      transition: opacity linear 0.15s;
-      text-decoration: none;
-      &:hover {
-        opacity: 0.5;
-      }
+  }
+  &__city {
+    border-bottom: 1px dashed $blue-color;
+    color: rgba($base-text-color, 0.87);
+    cursor: pointer;
+    font-family: $medium-font;
+    margin-left: 16px;
+    position: relative;
+    text-transform: uppercase;
+    transition: opacity linear 0.15s;
+    text-decoration: none;
+    &:hover {
+      opacity: 0.5;
     }
   }
   &__icon {

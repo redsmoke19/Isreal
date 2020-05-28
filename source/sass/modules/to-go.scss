@@ -96,6 +96,7 @@
   &__submit {
     margin-left: -218px;
     padding: 20px 35px;
+    z-index: 1;
     @media screen and (max-width: 767px) {
       margin: 0;
       padding: 20px 40px;

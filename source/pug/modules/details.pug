@@ -5,8 +5,8 @@ section.details
         .details__info
           h2.details__title.title Узнать подробности
           .details__your-city
-            span.details__your-city--title Ваш город:
-            a(href="#").details__your-city--name Новосибирск
+            span.details__town Ваш город:
+            a(href="#").details__city Новосибирск
               +icon('icon-nav', 'details__icon details__icon--nav', '20', '19')
             +icon('icon-pin', 'details__icon details__icon--pin', '18', '22')
           .details__card.card
@@ -16,8 +16,8 @@ section.details
                 img.card__image(src="img/content/card_photo_x1.png" srcset="img/content/card_photo_x2 2x" alt="Фотография девушек, обсуждающих вопросы" width="112" height="112")
             .card__info
               .card__curator
-                span.card__curator--title Ваш куратор:
-                span.card__curator--name Анна Горелик
+                span.card__curator-title Ваш куратор:
+                span.card__curator-name Анна Горелик
               p.card__address Новосибирск, ул. Щетинкина 68,<br> культурный центр «Бейт Менахем»
               ul.card__social.social
                 li.social__item.card__link
@@ -40,8 +40,8 @@ section.details
           span.details__note Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!
         form.details__form
           label
-            input.details__input.details__input--name.input(aria-label="Введите своё имя" type="text" placeholder="Имя" minlength="3" maxlength="20")
+            input.details__input.details__input--name.input(aria-label="Введите своё имя" type="text" placeholder="Имя" minlength="3" maxlength="20" requared)
           label
-            input.details__input.details__input--phone.input.js-phone__input(aria-label="Введите свой номер телефона" type="tel" placeholder="Телефон")
+            input.details__input.details__input--phone.input.js-phone(aria-label="Введите свой номер телефона" type="tel" placeholder="Телефон")
           button.details__button.button(type="submit") Позвоните мне
 
