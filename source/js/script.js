@@ -56,7 +56,6 @@
       this.classList.toggle('question__title--active');
 
       var questionAnswer = this.nextElementSibling;
-      console.log(questionAnswer);
       if (questionAnswer.style.maxHeight) {
         questionAnswer.style.maxHeight = null;
       } else {
@@ -284,16 +283,17 @@
   }());
 
   function getFormValiditi() {
-    var form = document.querySelector('.to-go__form');
+    var form = document.querySelectorAll('.js-form');
     var forms = document.querySelectorAll('.novalidate');
     for (var i = 0; i < forms.length; i++) {
       forms[i].setAttribute('novalidate', true);
     }
+    console.log(form);
 
     function hasError(field) {
-      // if (field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button') {
-      //   return;
-      // }
+      if (field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button') {
+        return;
+      }
       var validity = field.validity;
       if (validity.valid) {
         return;
@@ -338,37 +338,10 @@
 
     function showError(field, error) {
       field.classList.add('input__error');
-      var id = field.id;
-      if (!id) {
-        return;
-      }
-      var message = field.form.querySelector('.error-message#error-for-' + id);
-      if (!message) {
-        message = document.createElement('div');
-        message.className = 'error-message';
-        message.id = 'error-for-' + id;
-        field.parentNode.insertBefore(message, field.nextSibling);
-      }
-      field.setAttribute('aria-describedby', 'error-for-' + id);
-      message.innerHTML = error;
-      message.style.display = 'block';
-      message.style.visibility = 'visible';
     }
 
     function removeError(field) {
       field.classList.remove('input__error');
-      field.removeAttribute('aria-describedby');
-      var id = field.id;
-      if (!id) {
-        return;
-      }
-      var message = field.form.querySelector('.error-message#error-for-' + id + '');
-      if (!message) {
-        return;
-      }
-      message.innerHTML = '';
-      message.style.display = 'none';
-      message.style.visibility = 'hidden';
     }
 
     function fieldBlurHandler(evt) {
@@ -410,9 +383,11 @@
       }
 
     }
-    
-    form.addEventListener('submit', submitButtonHandler, false);
-    form.addEventListener('blur', fieldBlurHandler, true);
+
+    for(var j = 0; j < form.length; j++) {
+      form[j].addEventListener('submit', submitButtonHandler, false);
+      form[j].addEventListener('blur', fieldBlurHandler, true);
+    }
   }
 
   switchTabs();

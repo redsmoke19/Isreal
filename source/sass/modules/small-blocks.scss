@@ -52,16 +52,15 @@
   &:focus {
     border-color: #ffc341;
   }
-  &__error {
-    border-color: #ff0000;
-  }
 }
 
 label {
   position: relative;
 }
-
-.error-message {
+input.input__error {
+  border-color: #ff0000;
+}
+input.error-message {
   bottom: -20px;
   color: rgba(#ff0000, 0.5);
   font-size: 13px;

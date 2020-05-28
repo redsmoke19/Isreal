@@ -145,20 +145,24 @@
       }
     }
     &[data-tab-name="tabs__general"]::before {
-      background: url("../img/star_black.png") no-repeat;
+      background: url($icon-star-black-image) no-repeat;
       content: "";
-      height: 33px;
+      height: $icon-star-black-height;
       left: 20px;
       position: absolute;
+      background-position-x: $icon-star-black-offset-x;
+      background-position-y: $icon-star-black-offset-y;
       top: 50%;
       transform: translateY(-50%);
-      width: 28px;
+      width: $icon-star-black-width;
     }
     &.tabs__item--active[data-tab-name="tabs__general"]::before {
-      background-image: url("../img/star_white.png");
+      background-position-x: $icon-star-white-offset-x;
+      background-position-y: $icon-star-white-offset-y;
     }
     &[data-tab-name="tabs__general"]:not(.tabs__item--active):hover::before {
-      background-image: url("../img/star_yellow.png");
+      background-position-x: $icon-star-yellow-offset-x;
+      background-position-y: $icon-star-yellow-offset-y;
     }
     &[data-tab-name="tabs__academic"]::before {
       background: url("../img/hat_black.png") no-repeat;

@@ -1,14 +1,14 @@
 .modal-callback
   h2 Заказать звонок
   p  Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!
-  form
+  form.novalidate.js-form
     label.modal-callback__label
-      input.modal-callback__input(type="text" aria-label="Введите Ваше имя" minlength="3" maxlength="20" placeholder="Имя")
+      input.modal-callback__input(type="text" aria-label="Введите Ваше имя" minlength="3" maxlength="20" placeholder="Имя" required)
     label.modal-callback__label
-      input.modal-callback__input.js-phone(type="tel" aria-label="Введите Ваш номер телефона" placeholder="Телефон")
-    button.button.js-recall-button(type="button") Перезвоните мне
+      input.modal-callback__input.js-phone(type="tel" aria-label="Введите Ваш номер телефона" placeholder="Телефон" required)
+    input.button.js-recall-button(type="submit" value="Перезвоните мне")
     .modal-callback__footer
-      input.modal-callback__checkbox.visually-hidden(type="checkbox" id="accept" name="accept" value="verification")
+      input.modal-callback__checkbox.visually-hidden(type="checkbox" id="accept" name="accept" value="verification" required)
       label.modal-callback__text(for="accept") Нажимая на кнопку, вы даёте согласие на обработку персональных данных
   .modal__close(tabindex="0")
     +icon('icon-close', 'modal__icon modal__icon--close', '18', '18')
@@ -16,6 +16,6 @@
   +icon('icon-accept', 'modal__icon modal__icon--accept', '66', '64')
   h2 Заявка принята
   p Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!
-  button.button(type="submit") Понятно
+  button.button(type="button") Понятно
   .modal__close(tabindex="0")
     +icon('icon-close', 'modal__icon modal__icon--close', '18', '18')

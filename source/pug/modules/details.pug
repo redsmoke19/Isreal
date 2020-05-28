@@ -38,10 +38,10 @@ section.details
         .details__information
           p.details__text Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!
           span.details__note Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!
-        form.details__form
+        form.details__form.novalidate.js-form
           label
-            input.details__input.details__input--name.input(aria-label="Введите своё имя" type="text" placeholder="Имя" minlength="3" maxlength="20" requared)
+            input.details__input.details__input--name.input#details-name(aria-label="Введите своё имя" type="text" placeholder="Имя" minlength="3" maxlength="20" required)
           label
-            input.details__input.details__input--phone.input.js-phone(aria-label="Введите свой номер телефона" type="tel" placeholder="Телефон")
-          button.details__button.button(type="submit") Позвоните мне
+            input.details__input.details__input--phone.input.js-phone#details-phone(aria-label="Введите свой номер телефона" type="tel" placeholder="Телефон" required)
+          input.details__button.button(type="submit" value="Позвоните мне")
 

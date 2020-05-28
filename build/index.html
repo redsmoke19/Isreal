@@ -107,7 +107,7 @@
           <div class="to-go__content">
             <h2 class="to-go__title title">Хочу поехать!</h2>
             <p class="to-go__text">Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
-            <form class="to-go__form novalidate">
+            <form class="to-go__form novalidate js-form">
               <label>
                 <input class="to-go__phone input js-phone" id="to-go-input" data-mask="+7 (000) 000 00 00" aria-label="Введите свой номер телефона" type="tel" placeholder="Телефон" minlength="18" maxlength="18" required="">
               </label>
@@ -531,14 +531,14 @@
               <div class="details__information">
                 <p class="details__text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p><span class="details__note">Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</span>
               </div>
-              <form class="details__form">
+              <form class="details__form novalidate js-form">
                 <label>
-                  <input class="details__input details__input--name input" aria-label="Введите своё имя" type="text" placeholder="Имя" minlength="3" maxlength="20" requared="">
+                  <input class="details__input details__input--name input" id="details-name" aria-label="Введите своё имя" type="text" placeholder="Имя" minlength="3" maxlength="20" required="">
                 </label>
                 <label>
-                  <input class="details__input details__input--phone input js-phone" aria-label="Введите свой номер телефона" type="tel" placeholder="Телефон">
+                  <input class="details__input details__input--phone input js-phone" id="details-phone" aria-label="Введите свой номер телефона" type="tel" placeholder="Телефон" required="">
                 </label>
-                <button class="details__button button" type="submit">Позвоните мне</button>
+                <input class="details__button button" type="submit" value="Позвоните мне">
               </form>
             </div>
           </div>
@@ -573,16 +573,16 @@
       <div class="modal-callback">
         <h2>Заказать звонок</h2>
         <p> Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
-        <form>
+        <form class="novalidate js-form">
           <label class="modal-callback__label">
-            <input class="modal-callback__input" type="text" aria-label="Введите Ваше имя" minlength="3" maxlength="20" placeholder="Имя">
+            <input class="modal-callback__input" type="text" aria-label="Введите Ваше имя" minlength="3" maxlength="20" placeholder="Имя" required="">
           </label>
           <label class="modal-callback__label">
-            <input class="modal-callback__input js-phone" type="tel" aria-label="Введите Ваш номер телефона" placeholder="Телефон">
+            <input class="modal-callback__input js-phone" type="tel" aria-label="Введите Ваш номер телефона" placeholder="Телефон" required="">
           </label>
-          <button class="button js-recall-button" type="button">Перезвоните мне</button>
+          <input class="button js-recall-button" type="submit" value="Перезвоните мне">
           <div class="modal-callback__footer">
-            <input class="modal-callback__checkbox visually-hidden" type="checkbox" id="accept" name="accept" value="verification">
+            <input class="modal-callback__checkbox visually-hidden" type="checkbox" id="accept" name="accept" value="verification" required="">
             <label class="modal-callback__text" for="accept">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
           </div>
         </form>
@@ -598,7 +598,7 @@
         </svg>
         <h2>Заявка принята</h2>
         <p>Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
-        <button class="button" type="submit">Понятно</button>
+        <button class="button" type="button">Понятно</button>
         <div class="modal__close" tabindex="0">
           <svg class="svg-sprite-icon icon-icon-close modal__icon modal__icon--close" width="18" height="18">
             <use xlink:href="img/sprite_auto.svg#icon-close"></use>
